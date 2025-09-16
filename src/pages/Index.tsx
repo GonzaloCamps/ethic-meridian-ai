@@ -87,8 +87,8 @@ const Index = () => {
       <Watermark />
       
       <div className="relative z-10">
-        {/* Hero Section - Always visible con botón integrado */}
-        <MarsHero />
+        {/* Hero Section - visible solo en fase hero */}
+        {currentPhase === 'hero' && <MarsHero />}
 
         {/* Progressive Interfaces */}
         {currentPhase === 'agent' && (
