@@ -45,25 +45,26 @@ const MarsHero = () => {
             </p>
           </div>
 
-          {/* Three Keywords - Attractive Design */}
+          {/* Three Features - Attractive Design */}
           <div className="relative my-16">
             <div className="bg-gradient-mars/20 backdrop-blur-lg border border-mars-gold/30 rounded-2xl p-8 mars-glow">
-              <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-                <div className="group">
-                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
-                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">CONFIANZA</span>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="group text-center">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-6 border border-mars-gold/40 hover:scale-105 transition-all duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-mars-gold tracking-wide group-hover:text-white transition-colors mb-2">Auditoría IA</h3>
+                    <p className="text-sm text-foreground/80">Evaluación automatizada y continua</p>
                   </div>
                 </div>
-                <div className="text-mars-gold/60 text-3xl font-light">/</div>
-                <div className="group">
-                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
-                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">INVERSIÓN</span>
+                <div className="group text-center">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-6 border border-mars-gold/40 hover:scale-105 transition-all duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-mars-gold tracking-wide group-hover:text-white transition-colors mb-2">Financiamiento</h3>
+                    <p className="text-sm text-foreground/80">Acceso a capital para mejoras éticas</p>
                   </div>
                 </div>
-                <div className="text-mars-gold/60 text-3xl font-light">/</div>
-                <div className="group">
-                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
-                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">VALIDACIÓN</span>
+                <div className="group text-center">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-6 border border-mars-gold/40 hover:scale-105 transition-all duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-mars-gold tracking-wide group-hover:text-white transition-colors mb-2">Certificación NFT</h3>
+                    <p className="text-sm text-foreground/80">Sello verificable en blockchain Stellar</p>
                   </div>
                 </div>
               </div>
