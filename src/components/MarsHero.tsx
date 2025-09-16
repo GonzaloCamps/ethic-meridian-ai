@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Zap, Globe } from 'lucide-react';
 import marsHero from '@/assets/mars-hero.jpg';
 import ethicaiLogo from '@/assets/ethicai-logo.png';
-import ethicaiValidatorLogo from '@/assets/ethicai-validator-logo.png';
+import ethicaiValidatorLogo from '@/assets/ethicai-validator-logo-large.png';
 import stellarLogo from '@/assets/stellar-logo.png';
 
 const MarsHero = () => {
@@ -32,11 +32,11 @@ const MarsHero = () => {
         <div className="space-y-8">
           {/* Logo grande centrado */}
           <div className="space-y-6">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-12">
               <img 
                 src={ethicaiValidatorLogo} 
                 alt="EthicAI Validator" 
-                className="h-48 md:h-64 lg:h-72 w-auto opacity-95 floating"
+                className="h-56 md:h-80 lg:h-96 w-auto opacity-95 floating drop-shadow-2xl"
               />
             </div>
             <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-semibold">
