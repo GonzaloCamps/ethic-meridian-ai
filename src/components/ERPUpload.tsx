@@ -60,13 +60,13 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Suba su ERP
+              Cargue su ERP
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {agentType === 'ai' 
-              ? 'Su agente IA procesará automáticamente su ERP para análisis ético'
-              : 'Nuestro experto humano revisará su ERP de forma confidencial'
+              ? 'Su agente IA analizará automáticamente los datos para validación ética'
+              : 'Nuestro experto revisará su información de forma confidencial'
             }
           </p>
         </div>
@@ -106,9 +106,9 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold mb-3">Arrastra tu archivo ERP aquí</h3>
+                <h3 className="text-2xl font-bold mb-3">Suba su archivo ERP</h3>
                 <p className="text-muted-foreground mb-6">
-                  Formatos soportados: CSV, XML, JSON, Excel, PDF
+                  CSV, XML, JSON, Excel, PDF
                 </p>
               </div>
 

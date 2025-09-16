@@ -21,11 +21,11 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Elija su Agente
+              Seleccione su Agente
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Seleccione el tipo de asistencia que prefiere para guiarle a través del proceso de validación ética
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Elija quién le guiará en el proceso de validación ética
           </p>
         </div>
 
@@ -47,8 +47,7 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
                   <Sparkles className="w-5 h-5 text-mars-gold" />
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  IA avanzada especializada en validación ética de sistemas de inteligencia artificial. 
-                  Disponible 24/7 con respuestas instantáneas.
+                  IA especializada en validación ética. Análisis instantáneo y disponible 24/7.
                 </p>
               </div>
 
@@ -97,8 +96,7 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
                   <MessageCircle className="w-5 h-5 text-mars-copper" />
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Experto humano en ética de IA y cumplimiento normativo. 
-                  Consulta personalizada y comprensión contextual profunda.
+                  Experto humano en ética IA. Consulta personalizada y análisis contextual.
                 </p>
               </div>
 
