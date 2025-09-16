@@ -145,12 +145,20 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
             )}
           </>
         ) : (
-          /* Interfaz de Colateral */
           <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Shield className="w-6 h-6 text-mars-gold" />
-              Depósito de Colateral
+              Firma de Compromiso y Colateral
             </h3>
+
+            <div className="mb-6 p-4 bg-mars-gold/10 rounded-lg border border-mars-gold/20">
+              <h4 className="font-semibold text-mars-gold mb-2">¿Qué es el Colateral?</h4>
+              <p className="text-sm text-muted-foreground">
+                El colateral es su <strong>firma de compromiso</strong> que permite conectar su ERP a nuestra plataforma 
+                para monitoreo continuo de mejoras. No es un costo adicional: usted conserva su inversión y gana 
+                rentabilidad mientras implementamos las mejoras acordadas.
+              </p>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="space-y-6">

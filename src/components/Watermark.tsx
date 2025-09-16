@@ -5,17 +5,17 @@ import stellarLogo from '@/assets/stellar-logo.png';
 const Watermark = () => {
   return (
     <div className="watermark">
-      <div className="flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-mars-gold/20">
+      <div className="flex items-center gap-3 bg-background/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-mars-gold/20">
         <img 
           src={ethicaiLogo} 
           alt="EthicAiValidator" 
-          className="h-8 w-auto floating opacity-90"
+          className="h-12 w-auto floating opacity-90"
         />
-        <div className="w-px h-6 bg-mars-gold/40"></div>
+        <div className="w-px h-8 bg-mars-gold/40"></div>
         <img 
           src={stellarLogo} 
           alt="Stellar" 
-          className="h-6 w-auto opacity-80"
+          className="h-8 w-auto opacity-80"
         />
       </div>
     </div>

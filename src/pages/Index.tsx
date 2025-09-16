@@ -7,13 +7,15 @@ import ERPUpload from '@/components/ERPUpload';
 import AnalysisDashboard from '@/components/AnalysisDashboard';
 import ServicesImprovement from '@/components/ServicesImprovement';
 import PaymentInterface from '@/components/PaymentInterface';
+import MonitoringDashboard from '@/components/MonitoringDashboard';
+import CertificationComplete from '@/components/CertificationComplete';
 import Watermark from '@/components/Watermark';
 import marsHero from '@/assets/mars-hero.jpg';
 import marsMedium from '@/assets/mars-medium.jpg';
 import marsClose from '@/assets/mars-close.jpg';
 import marsTexture from '@/assets/mars-texture-detail.jpg';
 
-type AppPhase = 'hero' | 'agent' | 'erp' | 'analysis' | 'services' | 'payment' | 'investment';
+type AppPhase = 'hero' | 'agent' | 'erp' | 'analysis' | 'services' | 'payment' | 'monitoring' | 'certification';
 
 const Index = () => {
   const [currentPhase, setCurrentPhase] = useState<AppPhase>('hero');
@@ -29,7 +31,8 @@ const Index = () => {
       case 'analysis': return marsClose;
       case 'services':
       case 'payment':
-      case 'investment': return marsTexture;
+      case 'monitoring': return marsTexture;
+      case 'certification': return marsTexture;
       default: return marsHero;
     }
   };
@@ -58,7 +61,18 @@ const Index = () => {
   };
 
   const handlePaymentComplete = () => {
-    setCurrentPhase('investment');
+    setCurrentPhase('monitoring');
+  };
+
+  const handleCertificationReady = () => {
+    setCurrentPhase('certification');
+  };
+
+  const handleRestart = () => {
+    setCurrentPhase('hero');
+    setSelectedAgent(null);
+    setErpData(null);
+    setSelectedService(null);
   };
 
   React.useEffect(() => {
@@ -123,32 +137,18 @@ const Index = () => {
           />
         )}
 
-        {currentPhase === 'investment' && (
-          <div className="py-20 text-center">
-            <div className="max-w-4xl mx-auto px-6">
-              <h2 className="text-4xl font-bold text-mars-gold mb-6">
-                🚀 Implementación Iniciada
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Su proyecto de mejora de IA ética ha sido conectado con inversionistas. 
-                El proceso de implementación comenzará en las próximas 48 horas.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-2">Próximos Pasos</h3>
-                  <p className="text-sm text-muted-foreground">Nuestro equipo se pondrá en contacto para coordinar la implementación</p>
-                </div>
-                <div className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-2">Monitoreo</h3>
-                  <p className="text-sm text-muted-foreground">Acceso al dashboard de progreso en tiempo real</p>
-                </div>
-                <div className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-2">Certificación</h3>
-                  <p className="text-sm text-muted-foreground">NFT de certificación tras completar mejoras</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        {currentPhase === 'monitoring' && (
+          <MonitoringDashboard 
+            selectedService={selectedService}
+            onCertificationReady={handleCertificationReady}
+          />
+        )}
+
+        {currentPhase === 'certification' && (
+          <CertificationComplete 
+            certificationLevel="75%"
+            onRestart={handleRestart}
+          />
         )}
       </div>
     </div>
