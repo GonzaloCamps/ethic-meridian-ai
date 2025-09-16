@@ -58,7 +58,7 @@ const MarsHero = () => {
                 <div className="group text-center">
                   <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-6 border border-mars-gold/40 hover:scale-105 transition-all duration-300">
                     <h3 className="text-xl md:text-2xl font-bold text-mars-gold tracking-wide group-hover:text-white transition-colors mb-2">Financiamiento</h3>
-                    <p className="text-sm text-foreground/80">Acceso a capital para mejoras éticas</p>
+                    <p className="text-sm text-foreground/80">Acceso a capital que premia el uso ético de la IA</p>
                   </div>
                 </div>
                 <div className="group text-center">
