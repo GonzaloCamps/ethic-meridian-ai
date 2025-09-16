@@ -81,6 +81,27 @@ const MarsHero = () => {
               <h2 className="text-xl md:text-2xl font-semibold text-foreground">
                 Transforme su organización implementando IA con certificación de buenas prácticas
               </h2>
+              
+              <div className="mt-8 p-6 bg-background/10 backdrop-blur-sm rounded-xl border border-mars-gold/20">
+                <h3 className="text-lg font-bold text-mars-gold mb-4 flex items-center gap-2">
+                  <Globe className="w-5 h-5" />
+                  Meridiani Planum: Inspiración Marciana
+                </h3>
+                <p className="text-foreground/90 text-sm leading-relaxed mb-4">
+                  Meridiani Planum es un territorio ubicado en Marte que nos inspira a llegar al futuro. 
+                  Si llegamos a Marte será con IA, o no será. Esta visión nos impulsa a desarrollar 
+                  inteligencia artificial que sea verdaderamente ética para toda la humanidad.
+                </p>
+                <p className="text-foreground/80 text-xs leading-relaxed">
+                  En el contexto de <span className="text-mars-gold font-semibold">Hack Meridian</span>, 
+                  la Hackathon de Stellar, proponemos esta solución que nos permite asegurar que 
+                  podemos llegar a Marte con una IA más ética, responsable y beneficial para todos.
+                  <br />
+                  <span className="italic text-muted-foreground">
+                    (Meridiani Planum inspires our vision: reaching Mars with ethical AI for all humanity - Hack Meridian Stellar Hackathon solution)
+                  </span>
+                </p>
+              </div>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                 Únase a corporaciones, gobiernos y ONGs que ya confían en nuestra plataforma para 
                 validar y mejorar sus sistemas de inteligencia artificial.
