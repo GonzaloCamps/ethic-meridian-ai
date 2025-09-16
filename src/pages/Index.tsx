@@ -10,13 +10,14 @@ import PaymentInterface from '@/components/PaymentInterface';
 import MonitoringDashboard from '@/components/MonitoringDashboard';
 import CertificationComplete from '@/components/CertificationComplete';
 import InvestmentDashboard from '@/components/InvestmentDashboard';
+import FoundersPage from '@/components/FoundersPage';
 import Watermark from '@/components/Watermark';
 import marsHero from '@/assets/mars-hero.jpg';
 import marsMedium from '@/assets/mars-medium.jpg';
 import marsClose from '@/assets/mars-close.jpg';
 import marsTexture from '@/assets/mars-texture-detail.jpg';
 
-type AppPhase = 'hero' | 'agent' | 'erp' | 'analysis' | 'services' | 'payment' | 'investment' | 'monitoring' | 'certification';
+type AppPhase = 'hero' | 'agent' | 'erp' | 'analysis' | 'services' | 'payment' | 'investment' | 'monitoring' | 'certification' | 'founders' | 'complete';
 
 const Index = () => {
   const [currentPhase, setCurrentPhase] = useState<AppPhase>('hero');
@@ -72,6 +73,14 @@ const Index = () => {
 
   const handleCertificationReady = () => {
     setCurrentPhase('certification');
+  };
+
+  const handleCertificationComplete = () => {
+    setCurrentPhase('founders');
+  };
+
+  const handleFoundersComplete = () => {
+    setCurrentPhase('complete');
   };
 
   const handleRestart = () => {
@@ -160,12 +169,38 @@ const Index = () => {
         {currentPhase === 'certification' && (
           <CertificationComplete 
             certificationLevel="75%"
-            onRestart={handleRestart}
+            onRestart={handleCertificationComplete}
           />
         )}
 
+        {currentPhase === 'founders' && (
+          <FoundersPage onContinue={handleFoundersComplete} />
+        )}
+
+        {currentPhase === 'complete' && (
+          <div className="min-h-screen flex items-center justify-center">
+            <div className="text-center space-y-8">
+              <h1 className="text-4xl md:text-5xl font-bold">
+                <span className="bg-gradient-gold bg-clip-text text-transparent">
+                  Thank You for Your Journey
+                </span>
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                You've completed the EthicAI Validator experience. Ready to start another validation?
+              </p>
+              <button 
+                onClick={handleRestart}
+                className="group relative bg-gradient-mars text-foreground px-10 py-5 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-300 mars-pulse shadow-2xl border-2 border-mars-gold/50 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-mars-gold/30 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <span className="relative z-10 tracking-wide">START NEW VALIDATION</span>
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Stellar Security Section - Always visible at the bottom */}
-        {currentPhase !== 'hero' && (
+        {currentPhase !== 'hero' && currentPhase !== 'founders' && currentPhase !== 'complete' && (
           <section className="py-20 px-6">
             <div className="max-w-4xl mx-auto">
               <div className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-8">
@@ -176,13 +211,13 @@ const Index = () => {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2">Seguridad Blockchain Stellar</h3>
+                    <h3 className="text-lg font-semibold mb-2">Stellar Blockchain Security</h3>
                     <div className="space-y-2 text-sm text-muted-foreground">
-                      <p>• <strong>Hash SHA-256</strong> de evidencias para integridad</p>
-                      <p>• <strong>Anclaje on-chain</strong> de resultados en Stellar</p>
-                      <p>• <strong>Privacidad by-design:</strong> No se exponen PII en claro</p>
-                      <p>• <strong>KYC/AML</strong> integrado cuando aplica</p>
-                      <p>• <strong>Contratos Soroban</strong> para cálculo automático de puntuación</p>
+                      <p>• <strong>SHA-256 Hash</strong> evidence for integrity</p>
+                      <p>• <strong>On-chain anchoring</strong> of results in Stellar</p>
+                      <p>• <strong>Privacy by-design:</strong> No PII exposed in clear text</p>
+                      <p>• <strong>KYC/AML</strong> integrated when applicable</p>
+                      <p>• <strong>Soroban contracts</strong> for automatic scoring calculation</p>
                     </div>
                   </div>
                 </div>

@@ -21,11 +21,11 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Seleccione su Agente
+              Select Your Agent
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Elija quién le guiará en el proceso de validación ética
+            Choose who will guide you through the ethical validation process
           </p>
         </div>
 
@@ -43,26 +43,26 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
               
               <div>
                 <h3 className="text-2xl font-bold mb-3 flex items-center justify-center gap-2">
-                  Agente Artificial
+                  AI Agent
                   <Sparkles className="w-5 h-5 text-mars-gold" />
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  IA especializada en validación ética. Análisis instantáneo y disponible 24/7.
+                  AI specialized in ethical validation. Instant analysis and available 24/7.
                 </p>
               </div>
 
               <div className="space-y-3 text-sm">
                 <div className="flex items-center gap-2 text-mars-gold">
                   <div className="w-2 h-2 bg-mars-gold rounded-full" />
-                  Análisis instantáneo de ERPs
+                  Instant ERP analysis
                 </div>
                 <div className="flex items-center gap-2 text-mars-gold">
                   <div className="w-2 h-2 bg-mars-gold rounded-full" />
-                  Generación automática de reportes
+                  Automatic report generation
                 </div>
                 <div className="flex items-center gap-2 text-mars-gold">
                   <div className="w-2 h-2 bg-mars-gold rounded-full" />
-                  Recomendaciones personalizadas
+                  Personalized recommendations
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
                   handleAgentSelect('ai');
                 }}
               >
-                Seleccionar Agente IA
+                Select AI Agent
               </Button>
             </div>
           </Card>
@@ -92,26 +92,26 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
               
               <div>
                 <h3 className="text-2xl font-bold mb-3 flex items-center justify-center gap-2">
-                  Agente Humano
+                  Human Agent
                   <MessageCircle className="w-5 h-5 text-mars-copper" />
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Experto humano en ética IA. Consulta personalizada y análisis contextual.
+                  Human expert in AI ethics. Personalized consultation and contextual analysis.
                 </p>
               </div>
 
               <div className="space-y-3 text-sm">
                 <div className="flex items-center gap-2 text-mars-copper">
                   <div className="w-2 h-2 bg-mars-copper rounded-full" />
-                  Consulta personalizada
+                  Personalized consultation
                 </div>
                 <div className="flex items-center gap-2 text-mars-copper">
                   <div className="w-2 h-2 bg-mars-copper rounded-full" />
-                  Experiencia en regulaciones
+                  Regulatory expertise
                 </div>
                 <div className="flex items-center gap-2 text-mars-copper">
                   <div className="w-2 h-2 bg-mars-copper rounded-full" />
-                  Soporte estratégico
+                  Strategic support
                 </div>
               </div>
 
@@ -123,7 +123,7 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
                   handleAgentSelect('human');
                 }}
               >
-                Seleccionar Agente Humano
+                Select Human Agent
               </Button>
             </div>
           </Card>
@@ -133,12 +133,12 @@ const AgentSelector: React.FC<AgentSelectorProps> = ({ onSelectAgent }) => {
           <div className="mt-12 text-center">
             <div className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-6 max-w-2xl mx-auto">
               <h4 className="text-lg font-semibold mb-2">
-                {selectedAgent === 'ai' ? 'Agente IA Activado' : 'Conectando con Experto Humano'}
+                {selectedAgent === 'ai' ? 'AI Agent Activated' : 'Connecting with Human Expert'}
               </h4>
               <p className="text-muted-foreground">
                 {selectedAgent === 'ai' 
-                  ? 'Su agente artificial está listo para procesar su ERP y comenzar la validación ética.'
-                  : 'Un experto humano se conectará en breve para asistirle con su proceso de validación.'
+                  ? 'Your artificial agent is ready to process your ERP and begin ethical validation.'
+                  : 'A human expert will connect shortly to assist you with your validation process.'
                 }
               </p>
             </div>
