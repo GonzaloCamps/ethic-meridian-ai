@@ -63,16 +63,29 @@ const MarsHero = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="space-y-6">
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-              Transforme su organización con IA ética certificada
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Únase a corporaciones, gobiernos y ONGs que ya confían en nuestra plataforma para 
-              validar y mejorar sus sistemas de inteligencia artificial.
-            </p>
-            {/* CTA será manejado por el componente padre */}
+          {/* CTA Prominente */}
+          <div className="space-y-8 mt-12">
+            {/* Botón Principal */}
+            <div className="flex justify-center">
+              <button 
+                onClick={() => window.dispatchEvent(new CustomEvent('startValidation'))}
+                className="group relative bg-gradient-mars text-foreground px-12 py-6 rounded-xl font-bold text-2xl hover:scale-110 transition-all duration-300 mars-pulse shadow-2xl border-2 border-mars-gold/50 overflow-hidden"
+              >
+                {/* Efecto de brillo animado */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-mars-gold/30 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <span className="relative z-10 tracking-wide">COMENZAR</span>
+              </button>
+            </div>
+            
+            <div className="space-y-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-foreground">
+                Transforme su organización con IA ética certificada
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Únase a corporaciones, gobiernos y ONGs que ya confían en nuestra plataforma para 
+                validar y mejorar sus sistemas de inteligencia artificial.
+              </p>
+            </div>
           </div>
 
           {/* Trust Indicators */}

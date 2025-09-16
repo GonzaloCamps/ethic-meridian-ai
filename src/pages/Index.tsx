@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import MarsHero from '@/components/MarsHero';
@@ -61,6 +61,15 @@ const Index = () => {
     setCurrentPhase('investment');
   };
 
+  React.useEffect(() => {
+    const handleStartValidation = () => {
+      setCurrentPhase('agent');
+    };
+
+    window.addEventListener('startValidation', handleStartValidation);
+    return () => window.removeEventListener('startValidation', handleStartValidation);
+  }, []);
+
   return (
     <div 
       className="relative min-h-screen bg-background transition-all duration-1000"
@@ -78,25 +87,8 @@ const Index = () => {
       <Watermark />
       
       <div className="relative z-10">
-        {/* Hero Section - Always visible */}
+        {/* Hero Section - Always visible con botón integrado */}
         <MarsHero />
-        
-        {/* CTA Button for Hero */}
-        {currentPhase === 'hero' && (
-          <div className="py-8">
-            <div className="text-center">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                onClick={handleStartValidation}
-                className="group"
-              >
-                Comenzar Validación Ética
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
-              </Button>
-            </div>
-          </div>
-        )}
 
         {/* Progressive Interfaces */}
         {currentPhase === 'agent' && (
