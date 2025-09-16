@@ -19,6 +19,14 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        mars: {
+          crimson: "hsl(var(--mars-crimson))",
+          rust: "hsl(var(--mars-rust))",
+          gold: "hsl(var(--mars-gold))",
+          copper: "hsl(var(--mars-copper))",
+          dark: "hsl(var(--mars-dark))",
+          light: "hsl(var(--mars-light))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -80,10 +88,43 @@ export default {
             height: "0",
           },
         },
+        "mars-pulse": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px hsl(var(--mars-gold) / 0.5)",
+          },
+          "50%": {
+            boxShadow: "0 0 30px hsl(var(--primary) / 0.4)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        "glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 5px hsl(var(--primary) / 0.2)",
+          },
+          "50%": {
+            boxShadow: "0 0 20px hsl(var(--primary) / 0.6)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "mars-pulse": "mars-pulse 2s ease-in-out infinite alternate",
+        "float": "float 3s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-mars": "var(--gradient-mars)",
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-surface": "var(--gradient-surface)",
       },
     },
   },

@@ -2,43 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* EthicAiValidator - Mars Meridiani Planum Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Mars Color Palette - HSL format */
+    --mars-crimson: 0 65% 45%;
+    --mars-rust: 15 70% 40%;
+    --mars-gold: 45 85% 55%;
+    --mars-copper: 25 75% 45%;
+    --mars-dark: 15 25% 15%;
+    --mars-light: 25 15% 85%;
+    
+    /* Core Theme Colors */
+    --background: 15 25% 8%;
+    --foreground: 25 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 15 30% 12%;
+    --card-foreground: 25 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 15 35% 10%;
+    --popover-foreground: 25 15% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 85% 55%;
+    --primary-foreground: 15 25% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 65% 45%;
+    --secondary-foreground: 25 15% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 15 20% 20%;
+    --muted-foreground: 25 10% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 75% 45%;
+    --accent-foreground: 25 15% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 25 15% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 15 20% 25%;
+    --input: 15 25% 18%;
+    --ring: 45 85% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    
+    /* Mars Gradients */
+    --gradient-mars: linear-gradient(135deg, hsl(var(--mars-crimson)), hsl(var(--mars-rust)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--mars-gold)), hsl(var(--mars-copper)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--mars-dark)), hsl(var(--mars-crimson)));
+    --gradient-surface: radial-gradient(circle at 50% 0%, hsl(var(--mars-rust) / 0.3), transparent 70%);
+    
+    /* Animations */
+    --animation-glow: 0 0 20px hsl(var(--mars-gold) / 0.5);
+    --animation-pulse: 0 0 30px hsl(var(--primary) / 0.4);
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 15 30% 10%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
@@ -56,8 +73,8 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 15 25% 5%;
+    --foreground: 25 15% 98%;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -101,5 +118,62 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: var(--gradient-surface);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* Mars Futuristic Effects */
+  .mars-glow {
+    box-shadow: var(--animation-glow);
+  }
+  
+  .mars-pulse {
+    animation: mars-pulse 2s ease-in-out infinite alternate;
+  }
+  
+  .mars-surface {
+    background: var(--gradient-hero);
+    position: relative;
+  }
+  
+  .mars-surface::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--gradient-surface);
+    opacity: 0.8;
+  }
+  
+  .watermark {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    pointer-events: none;
+  }
+  
+  @keyframes mars-pulse {
+    from {
+      box-shadow: var(--animation-glow);
+    }
+    to {
+      box-shadow: var(--animation-pulse);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .floating {
+    animation: float 3s ease-in-out infinite;
   }
 }
