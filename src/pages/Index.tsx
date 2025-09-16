@@ -104,7 +104,7 @@ const Index = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background/80" />
       <div className="absolute inset-0 bg-gradient-surface" />
       
-      <Watermark showEthicAILogo={currentPhase !== 'hero'} />
+      <Watermark />
       
       <div className="relative z-10">
         {/* Hero Section - visible solo en fase hero */}
@@ -162,33 +162,6 @@ const Index = () => {
             certificationLevel="75%"
             onRestart={handleRestart}
           />
-        )}
-
-        {/* Stellar Security Section - Always visible at the bottom */}
-        {currentPhase !== 'hero' && (
-          <section className="py-20 px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 text-mars-gold mt-1">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2">Seguridad Blockchain Stellar</h3>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <p>• <strong>Hash SHA-256</strong> de evidencias para integridad</p>
-                      <p>• <strong>Anclaje on-chain</strong> de resultados en Stellar</p>
-                      <p>• <strong>Privacidad by-design:</strong> No se exponen PII en claro</p>
-                      <p>• <strong>KYC/AML</strong> integrado cuando aplica</p>
-                      <p>• <strong>Contratos Soroban</strong> para cálculo automático de puntuación</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
         )}
       </div>
     </div>
