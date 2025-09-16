@@ -19,29 +19,29 @@ interface MonitoringDashboardProps {
 }
 
 const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedService, onCertificationReady }) => {
-  const [timeProgress, setTimeProgress] = useState(0); // 0 a 100
+  const [timeProgress, setTimeProgress] = useState(0); // 0 to 100
   const [isAccelerating, setIsAccelerating] = useState(false);
 
-  // Datos iniciales y finales de los indicadores
+  // Initial and final indicator data
   const initialScores = {
-    'Tecnología': 45,
-    'RRHH': 52, 
-    'Operaciones': 70,
-    'Finanzas': 65,
-    'Cumplimiento': 58,
-    'Sostenibilidad': 55
+    'Technology': 45,
+    'HR': 52, 
+    'Operations': 70,
+    'Finance': 65,
+    'Compliance': 58,
+    'Sustainability': 55
   };
 
   const targetScores = {
-    'Tecnología': 85,
-    'RRHH': 88,
-    'Operaciones': 92,
-    'Finanzas': 87,
-    'Cumplimiento': 90,
-    'Sostenibilidad': 85
+    'Technology': 85,
+    'HR': 88,
+    'Operations': 92,
+    'Finance': 87,
+    'Compliance': 90,
+    'Sustainability': 85
   };
 
-  // Calcular scores actuales basado en el progreso temporal
+  // Calculate current scores based on time progress
   const getCurrentScores = () => {
     const current: { [key: string]: number } = {};
     Object.keys(initialScores).forEach(area => {
@@ -56,7 +56,7 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
   const currentScores = getCurrentScores();
   const averageScore = Math.round(Object.values(currentScores).reduce((a: number, b: number) => a + b, 0) / Object.keys(currentScores).length);
 
-  const daysRemaining = Math.round(45 * (1 - timeProgress / 100));
+  const daysRemaining = Math.round(365 * (1 - timeProgress / 100));
   const certificationLevel = averageScore >= 90 ? '100%' : averageScore >= 75 ? '75%' : '50%';
 
   const handleTimeAcceleration = () => {
@@ -87,47 +87,46 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Monitor de Progreso
+              Progress Monitor
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Monitoreo de mejoras en indicadores empresariales con seguimiento continuo 
-            actualizado para asegurar rendimiento sostenible
-            (Monitoring business improvements with continuous tracking for sustainable performance)
+            Monitoring business indicator improvements with continuous tracking 
+            updated to ensure sustainable performance
           </p>
         </div>
 
-        {/* Resumen de Progreso */}
+        {/* Progress Summary */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           <Card className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center">
             <Activity className="w-12 h-12 text-mars-gold mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Score Promedio</h3>
+            <h3 className="text-lg font-semibold mb-2">Average Score</h3>
             <p className="text-3xl font-bold text-mars-gold">{averageScore}%</p>
           </Card>
 
           <Card className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center">
             <Clock className="w-12 h-12 text-mars-copper mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Días Restantes</h3>
+            <h3 className="text-lg font-semibold mb-2">Days Remaining</h3>
             <p className="text-3xl font-bold text-mars-copper">{daysRemaining}</p>
           </Card>
 
           <Card className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center">
             <Target className="w-12 h-12 text-green-400 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Certificación</h3>
+            <h3 className="text-lg font-semibold mb-2">Certification</h3>
             <p className="text-3xl font-bold text-green-400">{certificationLevel}</p>
           </Card>
 
           <Card className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center">
             <TrendingUp className="w-12 h-12 text-mars-rust mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Progreso</h3>
+            <h3 className="text-lg font-semibold mb-2">Progress</h3>
             <p className="text-3xl font-bold text-mars-rust">{Math.round(timeProgress)}%</p>
           </Card>
         </div>
 
-        {/* Barra de Progreso Temporal */}
+        {/* Time Progress Bar */}
         <Card className="p-8 mb-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-2xl font-bold">Línea de Tiempo de Implementación</h3>
+            <h3 className="text-2xl font-bold">Implementation Timeline</h3>
             {timeProgress < 100 && (
               <Button 
                 variant="hero" 
@@ -136,7 +135,7 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
                 className="group"
               >
                 <FastForward className="w-5 h-5 mr-2" />
-                {isAccelerating ? 'Acelerando...' : 'Acelerar Tiempo'}
+                {isAccelerating ? 'Accelerating...' : 'Accelerate Time'}
               </Button>
             )}
           </div>
@@ -153,18 +152,18 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
           </div>
           
           <div className="flex justify-between text-sm text-muted-foreground">
-            <span>Inicio</span>
-            <span>30 días</span>
-            <span>45 días - Certificación</span>
+            <span>Start</span>
+            <span>6 months</span>
+            <span>12 months - Certification</span>
           </div>
         </Card>
 
-        {/* Hexágono de Progreso */}
+        {/* Progress Hexagon */}
         <Card className="p-8 mb-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
-          <h3 className="text-2xl font-bold mb-6 text-center">Progreso por Área Organizacional</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center">Progress by Organizational Area</h3>
           
           <div className="relative w-80 h-80 mx-auto">
-            {/* Niveles de referencia */}
+            {/* Reference levels */}
             {[25, 50, 75, 100].map((level, index) => (
               <div
                 key={level}
@@ -179,7 +178,7 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
               />
             ))}
 
-            {/* Puntos de áreas con animación */}
+            {/* Area points with animation */}
             {Object.entries(currentScores).map(([area, score], index) => {
               const numScore = Number(score);
               const angle = (index * 60 - 90) * (Math.PI / 180);
@@ -212,24 +211,24 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
           </div>
         </Card>
 
-        {/* Mejoras en Curso */}
+        {/* Improvements in Progress */}
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
-          <h3 className="text-2xl font-bold mb-6">Mejoras Implementándose</h3>
+          <h3 className="text-2xl font-bold mb-6">Improvements Being Implemented</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-center gap-3 p-4 bg-background/10 rounded-lg">
                 <div className={`w-3 h-3 rounded-full ${timeProgress > 30 ? 'bg-green-400' : 'bg-mars-gold animate-pulse'}`}></div>
                 <div>
-                  <p className="font-semibold">Mitigación de Sesgos</p>
-                  <p className="text-sm text-muted-foreground">Implementando fairness constraints</p>
+                  <p className="font-semibold">Bias Mitigation</p>
+                  <p className="text-sm text-muted-foreground">Implementing fairness constraints</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-3 p-4 bg-background/10 rounded-lg">
                 <div className={`w-3 h-3 rounded-full ${timeProgress > 60 ? 'bg-green-400' : 'bg-mars-gold animate-pulse'}`}></div>
                 <div>
-                  <p className="font-semibold">Privacidad Diferencial</p>
-                  <p className="text-sm text-muted-foreground">Protección avanzada de datos</p>
+                  <p className="font-semibold">Differential Privacy</p>
+                  <p className="text-sm text-muted-foreground">Advanced data protection</p>
                 </div>
               </div>
             </div>
@@ -238,32 +237,32 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
               <div className="flex items-center gap-3 p-4 bg-background/10 rounded-lg">
                 <div className={`w-3 h-3 rounded-full ${timeProgress > 80 ? 'bg-green-400' : 'bg-mars-gold animate-pulse'}`}></div>
                 <div>
-                  <p className="font-semibold">Trazabilidad RAG</p>
-                  <p className="text-sm text-muted-foreground">Sistema de trazabilidad completa</p>
+                  <p className="font-semibold">RAG Traceability</p>
+                  <p className="text-sm text-muted-foreground">Complete traceability system</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-3 p-4 bg-background/10 rounded-lg">
                 <div className={`w-3 h-3 rounded-full ${timeProgress > 90 ? 'bg-green-400' : 'bg-mars-gold animate-pulse'}`}></div>
                 <div>
-                  <p className="font-semibold">Integración Soroban</p>
-                  <p className="text-sm text-muted-foreground">Evidencias automáticas blockchain</p>
+                  <p className="font-semibold">Soroban Integration</p>
+                  <p className="text-sm text-muted-foreground">Automatic blockchain evidence</p>
                 </div>
               </div>
             </div>
           </div>
         </Card>
 
-        {/* Status de Certificación */}
+        {/* Certification Status */}
         {timeProgress >= 100 && (
           <Card className="p-8 border-2 border-mars-gold bg-mars-gold/10 text-center mars-glow">
             <Award className="w-16 h-16 text-mars-gold mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4">¡Certificación Lista!</h3>
+            <h3 className="text-2xl font-bold mb-4">Certification Ready!</h3>
             <p className="text-lg text-muted-foreground mb-6">
-              Su organización ha alcanzado el nivel de certificación {certificationLevel}
+              Your organization has reached certification level {certificationLevel}
             </p>
             <Button variant="stellar" size="lg" onClick={onCertificationReady}>
-              Canjear NFT de Certificación
+              Redeem Certification NFT
             </Button>
           </Card>
         )}

@@ -73,11 +73,11 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
             <Award className="w-24 h-24 text-mars-gold mx-auto mb-6 animate-bounce" />
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-gold bg-clip-text text-transparent">
-                ¡Certificación Completa!
+                Certification Complete!
               </span>
             </h1>
             <p className="text-2xl text-muted-foreground">
-              Su NFT de Certificación ha sido generado exitosamente
+              Your Certification NFT has been successfully generated
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
                 <div className="relative z-10 text-center">
                   <Shield className="w-20 h-20 text-mars-gold mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-foreground">EthicAI</h3>
-                  <p className="text-lg text-mars-gold">Certificación {certificationLevel}</p>
+                  <p className="text-lg text-mars-gold">Certification {certificationLevel}</p>
                   <p className="text-sm text-muted-foreground mt-2">#{nftDetails.tokenId.slice(-6)}</p>
                 </div>
               </div>
@@ -107,19 +107,19 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
               {nftMinted ? (
                 <div className="flex items-center justify-center gap-2 text-green-400">
                   <CheckCircle className="w-5 h-5" />
-                  <span className="font-semibold">NFT Minteado en Stellar</span>
+                  <span className="font-semibold">NFT Minted on Stellar</span>
                 </div>
               ) : (
                 <div className="flex items-center justify-center gap-2 text-mars-gold">
                   <Sparkles className="w-5 h-5 animate-spin" />
-                  <span className="font-semibold">Minteando NFT...</span>
+                  <span className="font-semibold">Minting NFT...</span>
                 </div>
               )}
             </div>
 
             {/* NFT Details */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-4">Detalles de Certificación</h3>
+              <h3 className="text-2xl font-bold mb-4">Certification Details</h3>
               
               <div className="space-y-4">
                 <div className="flex justify-between">
@@ -133,58 +133,53 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
                 </div>
                 
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Nivel:</span>
+                  <span className="text-muted-foreground">Level:</span>
                   <span className="font-semibold text-mars-gold">{nftDetails.certLevel}</span>
                 </div>
                 
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Fecha de Emisión:</span>
+                  <span className="text-muted-foreground">Issue Date:</span>
                   <span className="font-semibold">{nftDetails.issuedDate}</span>
                 </div>
                 
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Válido Hasta:</span>
+                  <span className="text-muted-foreground">Valid Until:</span>
                   <span className="font-semibold">{nftDetails.validUntil}</span>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-border">
-                <h4 className="font-semibold mb-2">Beneficios del Ecosistema NFT:</h4>
+                <h4 className="font-semibold mb-2">NFT Ecosystem Benefits:</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    Sello verificable on-chain
+                    Verifiable on-chain seal
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    Acceso a capital responsable del ecosistema
+                    Access to responsible ecosystem capital
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    Oportunidades de financiamiento adicionales
+                    Additional funding opportunities
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    Auditoría continua automatizada
+                    Automated continuous auditing
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-mars-gold" />
-                    Portafolio de NFTs para mayor credibilidad
+                    NFT portfolio for greater credibility
                   </li>
                   {certificationLevel === '100%' && (
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-mars-gold" />
-                      Consultoría estratégica premium
+                      Premium strategic consulting
                     </li>
                   )}
                 </ul>
                 <p className="text-xs text-muted-foreground mt-3 p-3 bg-mars-gold/10 rounded-lg border border-mars-gold/20">
-                  <span className="font-semibold text-mars-gold">Ecosistema EthicAI:</span> Este NFT le permite acceder a más oportunidades 
-                  de financiamiento. Cada certificación aumenta su credibilidad con inversores especializados.
-                  <br />
-                  <span className="italic text-xs">
-                    (This NFT enables access to additional funding opportunities within our ecosystem)
-                  </span>
+                  <span className="font-semibold text-mars-gold">EthicAI Ecosystem:</span> This NFT enables access to more funding opportunities. Each certification increases your credibility with specialized investors.
                 </p>
               </div>
             </div>
@@ -195,35 +190,35 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Button variant="stellar" className="group" disabled={!nftMinted}>
             <Download className="w-5 h-5 mr-2" />
-            Descargar Certificado
+            Download Certificate
           </Button>
           
           <Button variant="outline" className="group" disabled={!nftMinted}>
             <Share2 className="w-5 h-5 mr-2" />
-            Compartir Logro
+            Share Achievement
           </Button>
           
           <Button variant="outline" className="group" disabled={!nftMinted}>
             <Globe className="w-5 h-5 mr-2" />
-            Ver en Blockchain
+            View on Blockchain
           </Button>
         </div>
 
         {/* Impact Summary */}
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center">
-          <h3 className="text-2xl font-bold mb-6">Impacto Logrado</h3>
+          <h3 className="text-2xl font-bold mb-6">Impact Achieved</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <p className="text-3xl font-bold text-mars-gold mb-2">+32%</p>
-              <p className="text-sm text-muted-foreground">Mejora en Score Global</p>
+              <p className="text-sm text-muted-foreground">Global Score Improvement</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-green-400 mb-2">90%</p>
-              <p className="text-sm text-muted-foreground">Cumplimiento Normativo</p>
+              <p className="text-sm text-muted-foreground">Regulatory Compliance</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-mars-copper mb-2">0</p>
-              <p className="text-sm text-muted-foreground">Riesgos Críticos</p>
+              <p className="text-sm text-muted-foreground">Critical Risks</p>
             </div>
           </div>
         </Card>
@@ -231,10 +226,10 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
         {/* Restart Journey */}
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            ¿Desea validar otra organización o área de su empresa para expandir su portafolio de NFTs?
+            Would you like to validate another organization or area of your company to expand your NFT portfolio?
           </p>
           <Button variant="hero" onClick={onRestart}>
-            Comenzar Nueva Validación
+            Start New Validation
           </Button>
         </div>
       </div>

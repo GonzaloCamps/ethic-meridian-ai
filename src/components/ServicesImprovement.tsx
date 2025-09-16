@@ -25,24 +25,24 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
   const improvementOptions = [
     {
       id: 'ai-area',
-      title: 'Implementación de IA por área (Area-specific AI implementation)',
-      description: 'Implementar soluciones de IA específicas para mejorar áreas individuales (Deploy AI solutions for individual areas)',
+      title: 'Area-specific AI Implementation',
+      description: 'Deploy AI solutions for individual areas',
       icon: Zap,
       areas: [
-        { name: 'Tecnología - Automatización inteligente (Intelligent automation)', improvement: '+25 puntos rendimiento', cost: '15,000 XLM' },
-        { name: 'RRHH - IA para gestión de talento (AI for talent management)', improvement: '+20 puntos rendimiento', cost: '12,000 XLM' },
-        { name: 'Operaciones - Optimización predictiva (Predictive optimization)', improvement: '+15 puntos rendimiento', cost: '10,000 XLM' }
+        { name: 'Technology - Intelligent Automation', improvement: '+25 performance points', cost: '7,500 USDC' },
+        { name: 'HR - AI for Talent Management', improvement: '+20 performance points', cost: '6,000 USDC' },
+        { name: 'Operations - Predictive Optimization', improvement: '+15 performance points', cost: '5,000 USDC' }
       ]
     },
     {
       id: 'cross-indicator',
-      title: 'IA transversal empresarial (Enterprise-wide AI)',
-      description: 'Implementar sistemas de IA que optimicen un aspecto específico a través de todas las áreas (Deploy AI systems that optimize specific aspects across all areas)',
+      title: 'Enterprise-wide AI',
+      description: 'Deploy AI systems that optimize specific aspects across all areas',
       icon: TrendingUp,
       indicators: [
-        { name: 'Análisis predictivo integral (Comprehensive predictive analytics)', improvement: 'Todas las áreas +30%', cost: '25,000 XLM' },
-        { name: 'Sistemas de decisión inteligente (Intelligent decision systems)', improvement: 'Todas las áreas +25%', cost: '20,000 XLM' },
-        { name: 'Automatización de procesos con IA (AI-powered process automation)', improvement: 'Todas las áreas +20%', cost: '18,000 XLM' }
+        { name: 'Comprehensive Predictive Analytics', improvement: 'All areas +30%', cost: '12,500 USDC' },
+        { name: 'Intelligent Decision Systems', improvement: 'All areas +25%', cost: '10,000 USDC' },
+        { name: 'AI-powered Process Automation', improvement: 'All areas +20%', cost: '9,000 USDC' }
       ]
     }
   ];
@@ -50,41 +50,41 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
   const certifications = [
     {
       level: '50%',
-      title: 'Certificación IA Responsable Básica (Basic Responsible AI Certification)',
-      description: 'Estándar fundamental para implementación responsable de IA (Fundamental standard for responsible AI)',
-      requirements: 'Rendimiento mejorado ≥ 50% en todas las áreas',
-      cost: '5,000 XLM',
-      benefits: ['NFT de certificación', 'Sello verificable on-chain', 'Validez 1 año']
+      title: 'Basic Responsible AI Certification',
+      description: 'Fundamental standard for responsible AI',
+      requirements: 'Improved performance ≥ 50% in all areas',
+      cost: '2,500 USDC',
+      benefits: ['Certification NFT', 'Verifiable on-chain seal', '1 year validity']
     },
     {
       level: '75%',
-      title: 'Certificación IA Empresarial Avanzada (Advanced Business AI Certification)',
-      description: 'Estándar superior para organizaciones líderes (Superior standard for leaders)',
-      requirements: 'Rendimiento mejorado ≥ 75% en todas las áreas',
-      cost: '12,000 XLM',
-      benefits: ['NFT premium', 'Acceso a capital responsable', 'Validez 2 años', 'Auditoría continua']
+      title: 'Advanced Business AI Certification',
+      description: 'Superior standard for leaders',
+      requirements: 'Improved performance ≥ 75% in all areas',
+      cost: '6,000 USDC',
+      benefits: ['Premium NFT', 'Access to responsible capital', '2 year validity', 'Continuous auditing']
     },
     {
       level: '100%',
-      title: 'Certificación IA Empresarial Elite (Elite Business AI Certification)',
-      description: 'Máximo estándar de excelencia empresarial (Maximum standard of business excellence)',
-      requirements: 'Rendimiento mejorado = 100% en todas las áreas',
-      cost: '25,000 XLM',
-      benefits: ['NFT elite', 'Financiamiento preferencial', 'Validez 3 años', 'Consultoría estratégica']
+      title: 'Elite Business AI Certification',
+      description: 'Maximum standard of business excellence',
+      requirements: 'Improved performance = 100% in all areas',
+      cost: '12,500 USDC',
+      benefits: ['Elite NFT', 'Preferential financing', '3 year validity', 'Strategic consulting']
     }
   ];
 
   const aiStrategies = [
-    'Eliminación de sesgos con restricciones de equidad (Bias mitigation with fairness constraints)',
-    'Protección de privacidad con técnicas avanzadas (Privacy protection with differential privacy)',
-    'Entrenamiento ético con retroalimentación humana (Ethical training with human feedback - RLHF)',
-    'Sistemas de información con total transparencia (Transparent information systems - RAG)',
-    'Monitoreo continuo de calidad y equidad (Continuous quality and fairness monitoring)',
-    'Pruebas de seguridad automatizadas (Automated security testing - Red-teaming)',
-    'Fortalecimiento de datos y modelos (Data and model hardening)',
-    'Control de acceso y segregación segura (Secure access control - RBAC)',
-    'Evaluación continua con reglas por sector (Continuous evaluation with sector-specific rules)',
-    'Evidencia automática en blockchain (Automatic blockchain evidence - Soroban integration)'
+    'Bias mitigation with fairness constraints',
+    'Privacy protection with differential privacy',
+    'Ethical training with human feedback (RLHF)',
+    'Transparent information systems (RAG)',
+    'Continuous quality and fairness monitoring',
+    'Automated security testing (Red-teaming)',
+    'Data and model hardening',
+    'Secure access control (RBAC)',
+    'Continuous evaluation with sector-specific rules',
+    'Automatic blockchain evidence (Soroban integration)'
   ];
 
   const handleServiceSelect = (serviceId: string, details: any) => {
@@ -105,17 +105,16 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Implementación de IA para Mejoras Empresariales
+              AI Implementation for Business Improvements
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            Implementamos IA para mejorar indicadores empresariales con validación ética, 
-            facilitando acceso a inversión responsable y cumplimiento regulatorio continuo
-            (We implement AI to improve business indicators with ethical validation)
+            We implement AI to improve business indicators with ethical validation, 
+            facilitating access to responsible investment and continuous regulatory compliance
           </p>
         </div>
 
-        {/* Opciones de Mejora */}
+        {/* Improvement Options */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {improvementOptions.map((option, index) => (
             <Card key={option.id} className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
@@ -141,7 +140,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
                         variant="outline"
                         onClick={() => handleServiceSelect(option.id, area)}
                       >
-                        Seleccionar
+                        Select
                       </Button>
                     </div>
                   </div>
@@ -160,7 +159,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
                         variant="outline"
                         onClick={() => handleServiceSelect(option.id, indicator)}
                       >
-                        Seleccionar
+                        Select
                       </Button>
                     </div>
                   </div>
@@ -170,11 +169,11 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
           ))}
         </div>
 
-        {/* Certificaciones */}
+        {/* Certifications */}
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-center mb-8">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Certificaciones en IA Empresarial Disponibles
+              Available Business AI Certifications
             </span>
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -195,12 +194,12 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
 
                 <div className="space-y-4">
                   <div>
-                    <p className="font-semibold text-sm mb-2">Requisitos:</p>
+                    <p className="font-semibold text-sm mb-2">Requirements:</p>
                     <p className="text-xs text-muted-foreground">{cert.requirements}</p>
                   </div>
 
                   <div>
-                    <p className="font-semibold text-sm mb-2">Beneficios:</p>
+                    <p className="font-semibold text-sm mb-2">Benefits:</p>
                     <ul className="text-xs text-muted-foreground space-y-1">
                       {cert.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center gap-2">
@@ -218,7 +217,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
                       className="w-full"
                       onClick={() => handleServiceSelect('certification', cert)}
                     >
-                      Obtener Certificación
+                      Get Certification
                     </Button>
                   </div>
                 </div>
@@ -227,11 +226,11 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
           </div>
         </div>
 
-        {/* Estrategias de IA */}
+        {/* AI Strategies */}
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm mb-8">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Sparkles className="w-6 h-6 text-mars-gold" />
-            Tecnologías de IA Disponibles (Available AI Technologies)
+            Available AI Technologies
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {aiStrategies.map((strategy, index) => (
@@ -245,40 +244,40 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
 
         {/* Pool Explanation */}
         <Card className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm mb-8">
-          <h3 className="text-xl font-bold mb-4 text-mars-gold">¿Qué es el Pool de Financiamiento?</h3>
+          <h3 className="text-xl font-bold mb-4 text-mars-gold">What is the Funding Pool?</h3>
           <div className="space-y-3 text-sm text-muted-foreground">
-            <p>• El pool es una alcancía común en Stellar, respaldada por un contrato inteligente.</p>
-            <p>• El cliente se compromete a usar los fondos en IA responsable, con monitoreo y resultados transparentes.</p>
-            <p>• Los inversionistas ven los estados financieros y reciben automáticamente su retorno proporcional.</p>
+            <p>• The pool is a common fund on Stellar, backed by a smart contract.</p>
+            <p>• The client commits to using funds for responsible AI, with transparent monitoring and results.</p>
+            <p>• Investors see financial statements and automatically receive their proportional return.</p>
           </div>
         </Card>
 
-        {/* Pool Stellar */}
+        {/* Stellar Pool */}
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center">
           <div className="mb-6">
             <Globe className="w-16 h-16 text-mars-gold mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Financiamiento con Stellar (Stellar-based Financing)</h3>
+            <h3 className="text-2xl font-bold mb-2">Stellar-based Financing</h3>
             <p className="text-muted-foreground">
-              Aproveche las ventajas del ecosistema Stellar para financiar la implementación de mejoras empresariales con IA responsable, transformándolas en una verdadera ventaja competitiva (Leverage Stellar ecosystem advantages to fund responsible business AI improvements, transforming them into a true competitive advantage)
+              Leverage Stellar ecosystem advantages to fund responsible business AI improvements, transforming them into a true competitive advantage
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-4 text-sm">
             <div className="p-4 bg-background/10 rounded-lg">
-              <p className="font-semibold text-mars-gold">Costos ultra bajos (Ultra-low costs)</p>
-              <p className="text-muted-foreground">~0.00001 XLM por transacción</p>
+              <p className="font-semibold text-mars-gold">Ultra-low costs</p>
+              <p className="text-muted-foreground">~0.00001 XLM per transaction</p>
             </div>
             <div className="p-4 bg-background/10 rounded-lg">
-              <p className="font-semibold text-mars-gold">Procesamiento instantáneo (Instant processing)</p>
-              <p className="text-muted-foreground">3-5 segundos</p>
+              <p className="font-semibold text-mars-gold">Instant processing</p>
+              <p className="text-muted-foreground">3-5 seconds</p>
             </div>
             <div className="p-4 bg-background/10 rounded-lg">
-              <p className="font-semibold text-mars-gold">Total transparencia (Full transparency)</p>
-              <p className="text-muted-foreground">Blockchain público</p>
+              <p className="font-semibold text-mars-gold">Full transparency</p>
+              <p className="text-muted-foreground">Public blockchain</p>
             </div>
             <div className="p-4 bg-background/10 rounded-lg">
-              <p className="font-semibold text-mars-gold">Pools de inversión (Investment pools)</p>
-              <p className="text-muted-foreground">8-15% APY rendimiento</p>
+              <p className="font-semibold text-mars-gold">Investment pools</p>
+              <p className="text-muted-foreground">5% APY return</p>
             </div>
           </div>
         </Card>

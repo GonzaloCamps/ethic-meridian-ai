@@ -60,58 +60,58 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Cargue su ERP
+              Upload your ERP
             </span>
           </h2>
           <div className="max-w-2xl mx-auto">
             {agentType === 'ai' ? (
               <div className="bg-gradient-to-r from-mars-gold/20 to-mars-crimson/20 border border-mars-gold/30 rounded-lg p-6 mb-8">
                 <p className="text-lg font-semibold text-foreground leading-relaxed">
-                  Su agente de IA analiza los datos y garantiza una validación automática, detallada y segura, protegiendo siempre la confidencialidad de su información.
+                  Your AI agent analyzes the data and ensures automatic, detailed and secure validation, always protecting the confidentiality of your information.
                 </p>
               </div>
             ) : (
               <p className="text-lg text-muted-foreground mb-8">
-                Nuestro experto revisará su información de forma confidencial
+                Our expert will review your information confidentially
               </p>
             )}
             
             {/* ERP Explanation */}
             <div className="bg-card/40 backdrop-blur-sm border border-border rounded-lg p-6 text-left space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-mars-gold mb-3">📌 ERP en las empresas</h3>
+                <h3 className="text-xl font-bold text-mars-gold mb-3">📌 ERP in Companies</h3>
                 <p className="text-muted-foreground mb-4">
-                  Un ERP es el sistema nervioso central de una empresa: conecta finanzas, ventas, operaciones, RRHH e inventario en un solo software.
+                  An ERP is the central nervous system of a company: it connects finance, sales, operations, HR and inventory in a single software.
                 </p>
               </div>
               
               <div>
-                <h4 className="text-lg font-semibold text-foreground mb-2">📌 ¿Para qué sirve?</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-2">📌 What is it for?</h4>
                 <ul className="text-muted-foreground space-y-1">
-                  <li>• Centraliza datos en tiempo real</li>
-                  <li>• Aumenta eficiencia y elimina errores</li>
-                  <li>• Mejora la toma de decisiones</li>
-                  <li>• Escala con el crecimiento de la empresa</li>
+                  <li>• Centralizes data in real time</li>
+                  <li>• Increases efficiency and eliminates errors</li>
+                  <li>• Improves decision making</li>
+                  <li>• Scales with company growth</li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="text-lg font-semibold text-foreground mb-2">📌 Integración con Ethic IA Validator</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-2">📌 Integration with EthicAI Validator</h4>
                 <ul className="text-muted-foreground space-y-1">
-                  <li>• <strong>Conexión inicial:</strong> el ERP se vincula con un contrato inteligente (depósito de garantía).</li>
-                  <li>• <strong>Monitoreo real:</strong> analizamos indicadores desde el ERP.</li>
-                  <li>• <strong>IA ética:</strong> proponemos mejoras sostenibles y transparentes.</li>
-                  <li>• <strong>Sello de confianza:</strong> blockchain certifica cumplimiento y abre acceso a inversión.</li>
-                  <li>• <strong>Mejora continua:</strong> actualización constante con nuevas regulaciones.</li>
+                  <li>• <strong>Initial connection:</strong> ERP links with smart contract (collateral deposit).</li>
+                  <li>• <strong>Real monitoring:</strong> we analyze indicators from the ERP.</li>
+                  <li>• <strong>Ethical AI:</strong> we propose sustainable and transparent improvements.</li>
+                  <li>• <strong>Trust seal:</strong> blockchain certifies compliance and opens access to investment.</li>
+                  <li>• <strong>Continuous improvement:</strong> constant updating with new regulations.</li>
                 </ul>
               </div>
               
               <div className="bg-gradient-to-r from-mars-gold/10 to-mars-crimson/10 border border-mars-gold/20 rounded-lg p-4">
                 <p className="text-foreground font-medium">
-                  👉 <strong>En simple palabras.</strong>
+                  👉 <strong>In simple words.</strong>
                 </p>
                 <p className="text-muted-foreground mt-2">
-                  Conectamos el ERP de las grandes empresas a blockchain, aplicamos IA ética y transformamos los datos en confianza, inversión y crecimiento sostenible.
+                  We connect large companies' ERPs to blockchain, apply ethical AI and transform data into trust, investment and sustainable growth.
                 </p>
               </div>
             </div>
@@ -137,7 +137,7 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold mb-3">Suba su archivo ERP</h3>
+                <h3 className="text-2xl font-bold mb-3">Upload your ERP file</h3>
                 <p className="text-muted-foreground mb-6">
                   CSV, XML, JSON, Excel, PDF
                 </p>
@@ -147,7 +147,7 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
                 <Button variant="hero" size="lg" asChild>
                   <label className="cursor-pointer">
                     <FileText className="w-5 h-5 mr-2" />
-                    Seleccionar Archivo
+                    Select File
                     <input 
                       type="file" 
                       className="hidden" 
@@ -166,11 +166,11 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
                     <FileText className="w-10 h-10 text-mars-dark" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-3">Procesando ERP...</h3>
+                    <h3 className="text-2xl font-bold mb-3">Processing ERP...</h3>
                     <p className="text-muted-foreground mb-6">
                       {agentType === 'ai' 
-                        ? 'Analizando estructuras de datos y identificando áreas de evaluación...'
-                        : 'Nuestro experto está revisando su archivo de forma segura...'
+                        ? 'Analyzing data structures and identifying evaluation areas...'
+                        : 'Our expert is securely reviewing your file...'
                       }
                     </p>
                     <div className="w-64 h-2 bg-border rounded-full mx-auto overflow-hidden">
@@ -184,12 +184,12 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
                     <Check className="w-10 h-10 text-mars-dark" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-3">ERP Procesado Exitosamente</h3>
+                    <h3 className="text-2xl font-bold mb-3">ERP Successfully Processed</h3>
                     <p className="text-muted-foreground mb-6">
-                      Archivo: {uploadedFile.name} ({Math.round(uploadedFile.size / 1024)} KB)
+                      File: {uploadedFile.name} ({Math.round(uploadedFile.size / 1024)} KB)
                     </p>
                     <Button variant="stellar" size="lg">
-                      Continuar al Análisis
+                      Continue to Analysis
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </div>
@@ -202,9 +202,9 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
         {/* Process Steps */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[
-            { step: '1', title: 'Carga Segura', status: uploadedFile ? 'completed' : 'current' },
-            { step: '2', title: 'Análisis IA', status: uploadedFile && !isProcessing ? 'current' : 'pending' },
-            { step: '3', title: 'Certificación', status: 'pending' }
+            { step: '1', title: 'Secure Upload', status: uploadedFile ? 'completed' : 'current' },
+            { step: '2', title: 'AI Analysis', status: uploadedFile && !isProcessing ? 'current' : 'pending' },
+            { step: '3', title: 'Certification', status: 'pending' }
           ].map((item, index) => (
             <div key={index} className="flex items-center gap-3">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ${
