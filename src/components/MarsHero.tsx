@@ -45,31 +45,13 @@ const MarsHero = () => {
             </p>
           </div>
 
-          {/* Value Props */}
-          <div className="grid md:grid-cols-3 gap-6 my-12">
-            {[
-              {
-                icon: Shield,
-                title: "Certificación NFT",
-                description: "Sello verificable en blockchain Stellar"
-              },
-              {
-                icon: Zap,
-                title: "Auditoría IA",
-                description: "Evaluación automatizada y continua"
-              },
-              {
-                icon: Globe,
-                title: "Financiamiento",
-                description: "Acceso a capital para mejoras éticas"
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-6 mars-glow">
-                <feature.icon className="w-10 h-10 text-mars-gold mx-auto mb-3" />
-                <h3 className="font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
+          {/* Three Keywords */}
+          <div className="flex justify-center items-center gap-8 md:gap-16 my-12">
+            <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider">AUDITORÍA</span>
+            <span className="text-mars-gold/40">•</span>
+            <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider">FINANCIAMIENTO</span>
+            <span className="text-mars-gold/40">•</span>
+            <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider">CERTIFICACIÓN</span>
           </div>
 
           {/* CTA y Misión */}
