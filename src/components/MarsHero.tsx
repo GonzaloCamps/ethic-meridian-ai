@@ -36,7 +36,7 @@ const MarsHero = () => {
               <img 
                 src={ethicaiValidatorLogo} 
                 alt="EthicAI Validator" 
-                className="h-32 md:h-48 w-auto opacity-95 floating"
+                className="h-48 md:h-64 lg:h-72 w-auto opacity-95 floating"
               />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
