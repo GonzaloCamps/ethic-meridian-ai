@@ -107,12 +107,19 @@ const MarsHero = () => {
             <p className="text-sm text-muted-foreground mb-4">
               Construido para Hackathon Meridian - Stellar Blockchain
             </p>
-            <div className="flex justify-center items-center gap-8 opacity-60">
-              <span className="text-xs">Blockchain Verificable</span>
-              <span className="text-xs">•</span>
-              <span className="text-xs">Auditoría Continua</span>
-              <span className="text-xs">•</span>
-              <span className="text-xs">Certificación NFT</span>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="bg-card/20 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-4">
+                <h4 className="font-semibold text-sm text-mars-gold mb-1">Auditoría IA</h4>
+                <p className="text-xs text-muted-foreground">Evaluación automatizada y continua</p>
+              </div>
+              <div className="bg-card/20 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-4">
+                <h4 className="font-semibold text-sm text-mars-gold mb-1">Financiamiento</h4>
+                <p className="text-xs text-muted-foreground">Acceso a capital para mejoras éticas</p>
+              </div>
+              <div className="bg-card/20 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-4">
+                <h4 className="font-semibold text-sm text-mars-gold mb-1">Certificación NFT</h4>
+                <p className="text-xs text-muted-foreground">Sello verificable en blockchain Stellar</p>
+              </div>
             </div>
           </div>
         </div>
