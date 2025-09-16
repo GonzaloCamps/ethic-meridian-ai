@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Zap, Globe } from 'lucide-react';
 import marsHero from '@/assets/mars-hero.jpg';
 import ethicaiLogo from '@/assets/ethicai-logo.png';
+import ethicaiValidatorLogo from '@/assets/ethicai-validator-logo.png';
 import stellarLogo from '@/assets/stellar-logo.png';
 
 const MarsHero = () => {
@@ -29,24 +30,18 @@ const MarsHero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
         <div className="space-y-8">
-          {/* Logo y Title - Centrado */}
+          {/* Logo grande centrado */}
           <div className="space-y-6">
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-8">
               <img 
-                src={ethicaiLogo} 
+                src={ethicaiValidatorLogo} 
                 alt="EthicAI Validator" 
-                className="h-32 md:h-40 w-auto opacity-95 floating"
+                className="h-32 md:h-48 w-auto opacity-95 floating"
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="bg-gradient-gold bg-clip-text text-transparent">
-                EthicAI Validator
-              </span>
-              <span className="text-xs align-super text-mars-gold">™</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              <strong className="text-foreground">Potenciamos empresas éticas con IA</strong> mediante certificación blockchain verificable.
-              <span className="text-mars-gold block mt-2">Sea referente de confianza ante clientes e inversores.</span>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <strong className="text-foreground">Potenciamos a las empresas que utilicen IA de forma ética</strong> y las posicionamos en el mercado
+              <span className="text-mars-gold block mt-2">como referentes de confianza ante clientes e inversionistas.</span>
             </p>
           </div>
 
