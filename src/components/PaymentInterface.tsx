@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { signTransaction, getPublicKey } from '@stellar/freighter-api';
+import { Server, Networks, TransactionBuilder, Operation, Asset } from 'stellar-sdk';
+import FreighterConnect from './FreighterConnect';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { 
@@ -38,11 +41,48 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
     setShowCollateral(true);
   };
 
-  const handleCollateralDeposit = () => {
-    // Simular proceso de depósito e iniciar búsqueda de financiamiento
-    setTimeout(() => {
+  const [depositLoading, setDepositLoading] = useState(false);
+  const [depositError, setDepositError] = useState<string | null>(null);
+
+  const [txHash, setTxHash] = useState<string | null>(null);
+  const [depositSuccess, setDepositSuccess] = useState(false);
+
+  const handleCollateralDeposit = async () => {
+    setDepositError(null);
+    setDepositLoading(true);
+    setTxHash(null);
+    setDepositSuccess(false);
+    try {
+      const destination = "GAB66SJNKXN5VZ4L4GJ35U5J2OYFIYXMH4SYPIMB2GYLA5M7RMUNVMPP";
+      const amount = collateralDetails.totalCollateral.toString();
+      const server = new Server("https://horizon-testnet.stellar.org");
+      const publicKey = await getPublicKey();
+      const account = await server.loadAccount(publicKey);
+      const fee = await server.fetchBaseFee();
+      const transaction = new TransactionBuilder(account, {
+        fee: fee.toString(),
+        networkPassphrase: Networks.TESTNET
+      })
+        .addOperation(Operation.payment({
+          destination,
+          asset: Asset.native(),
+          amount
+        }))
+        .setTimeout(180)
+        .build();
+
+      // Solicita la firma a Freighter
+      const signedXDR = await signTransaction(transaction.toXDR(), Networks.TESTNET);
+      // Envía la transacción a la red
+      const result = await server.submitTransaction(TransactionBuilder.fromXDR(signedXDR, Networks.TESTNET));
+      setDepositLoading(false);
+      setTxHash(result.hash);
+      setDepositSuccess(true);
       onPaymentComplete();
-    }, 2000);
+    } catch (e: any) {
+      setDepositLoading(false);
+      setDepositError(e.message || "Error al depositar colateral");
+    }
   };
 
   return (
@@ -132,7 +172,10 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
             )}
           </>
         ) : (
-          <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
+            <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
+              <div className="mb-8">
+                <FreighterConnect />
+              </div>
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Shield className="w-6 h-6 text-mars-gold" />
               Firma de Compromiso y Colateral
@@ -227,13 +270,35 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
                 size="lg" 
                 onClick={handleCollateralDeposit}
                 className="group"
+                disabled={depositLoading}
               >
-                Depositar Colateral y Comenzar
+                {depositLoading ? "Procesando..." : "Depositar Colateral y Comenzar"}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
                 Al continuar, acepta los términos del smart contract de Soroban
               </p>
+              {depositError && (
+                <div className="mt-2 text-red-600 text-sm">{depositError}</div>
+              )}
+              {depositSuccess && txHash && (
+                <div className="mt-6 p-4 rounded-lg bg-green-50 border border-green-300">
+                  <div className="font-bold text-green-700 mb-2">¡Depósito realizado con éxito!</div>
+                  <div className="mb-2 text-green-700">Just as Stellar democratizes finance, our validator democratizes trust in artificial intelligence.</div>
+                  <div className="text-sm text-green-800 mb-2">
+                    <span className="font-semibold">Hash de la transacción:</span>
+                    <span className="ml-2 break-all">{txHash}</span>
+                  </div>
+                  <a
+                    href={`https://stellar.expert/explorer/public/tx/${txHash}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 underline text-sm"
+                  >
+                    Ver en Stellar Expert
+                  </a>
+                </div>
+              )}
             </div>
           </Card>
         )}
