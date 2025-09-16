@@ -25,7 +25,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
     {
       id: 'ai-area',
       title: 'Implementación de IA por área (Area-specific AI implementation)',
-      description: 'Implementar soluciones de IA ética específicas para mejorar el rendimiento de áreas individuales (Deploy ethical AI solutions to improve individual area performance)',
+      description: 'Implementar soluciones de IA con enfoque responsable específicas para mejorar el rendimiento de áreas individuales (Deploy responsible AI solutions to improve individual area performance)',
       icon: Zap,
       areas: [
         { name: 'Tecnología - Automatización inteligente (Intelligent automation)', improvement: '+25 puntos rendimiento', cost: '15,000 XLM' },
@@ -50,24 +50,24 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
     {
       level: '50%',
       title: 'Certificación IA Responsable Básica (Basic Responsible AI Certification)',
-      description: 'Estándar fundamental para implementación ética de IA (Fundamental standard for ethical AI implementation)',
-      requirements: 'Rendimiento con IA ética ≥ 50% en todas las áreas',
+      description: 'Estándar fundamental para implementación responsable de IA en mejora de indicadores (Fundamental standard for responsible AI implementation in indicator improvement)',
+      requirements: 'Rendimiento mejorado con IA responsable ≥ 50% en todas las áreas',
       cost: '5,000 XLM',
       benefits: ['NFT de certificación', 'Sello verificable on-chain', 'Validez 1 año']
     },
     {
       level: '75%',
-      title: 'Certificación IA Ética Avanzada (Advanced Ethical AI Certification)',
-      description: 'Estándar superior para organizaciones líderes en IA responsable (Superior standard for responsible AI leaders)',
-      requirements: 'Rendimiento con IA ética ≥ 75% en todas las áreas',
+      title: 'Certificación IA Empresarial Avanzada (Advanced Business AI Certification)',
+      description: 'Estándar superior para organizaciones líderes en mejoras con IA responsable (Superior standard for leaders in responsible AI improvements)',
+      requirements: 'Rendimiento mejorado con IA responsable ≥ 75% en todas las áreas',
       cost: '12,000 XLM',
       benefits: ['NFT premium', 'Acceso a capital responsable', 'Validez 2 años', 'Auditoría continua']
     },
     {
       level: '100%',
-      title: 'Certificación IA Ética Elite (Elite Ethical AI Certification)',
-      description: 'Máximo estándar de excelencia en IA ética (Maximum standard of ethical AI excellence)',
-      requirements: 'Rendimiento con IA ética = 100% en todas las áreas',
+      title: 'Certificación IA Empresarial Elite (Elite Business AI Certification)',
+      description: 'Máximo estándar de excelencia en mejoras empresariales con IA responsable (Maximum standard of excellence in responsible business AI improvements)',
+      requirements: 'Rendimiento mejorado con IA responsable = 100% en todas las áreas',
       cost: '25,000 XLM',
       benefits: ['NFT elite', 'Financiamiento preferencial', 'Validez 3 años', 'Consultoría estratégica']
     }
@@ -97,7 +97,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Implementación de IA Ética
+              Implementación de IA para Mejoras Empresariales
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
@@ -167,7 +167,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-center mb-8">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Certificaciones en IA Ética Disponibles
+              Certificaciones en IA Empresarial Disponibles
             </span>
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -224,7 +224,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm mb-8">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Sparkles className="w-6 h-6 text-mars-gold" />
-            Tecnologías de IA Ética Disponibles (Available Ethical AI Technologies)
+            Tecnologías de IA Responsable Disponibles (Available Responsible AI Technologies)
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {aiStrategies.map((strategy, index) => (
@@ -242,7 +242,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
             <Globe className="w-16 h-16 text-mars-gold mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Financiamiento con Stellar (Stellar-based Financing)</h3>
             <p className="text-muted-foreground">
-              Aproveche las ventajas del ecosistema Stellar para financiar la implementación de IA ética (Leverage Stellar ecosystem advantages to fund ethical AI implementation)
+              Aproveche las ventajas del ecosistema Stellar para financiar la implementación de mejoras empresariales con IA responsable (Leverage Stellar ecosystem advantages to fund responsible business AI improvements)
             </p>
           </div>
 

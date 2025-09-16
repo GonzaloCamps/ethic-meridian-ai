@@ -52,7 +52,7 @@ const MarsHero = () => {
               {
                 icon: Globe,
                 title: "Capital Responsable",
-                description: "Acceso a financiamiento para mejoras de IA ética"
+                description: "Acceso a financiamiento para mejoras empresariales con IA responsable"
               }
             ].map((feature, index) => (
               <div key={index} className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-6 mars-glow">
@@ -79,7 +79,7 @@ const MarsHero = () => {
             
             <div className="space-y-4">
               <h2 className="text-xl md:text-2xl font-semibold text-foreground">
-                Transforme su organización con IA ética certificada
+                Transforme su organización implementando IA con certificación de buenas prácticas
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                 Únase a corporaciones, gobiernos y ONGs que ya confían en nuestra plataforma para 

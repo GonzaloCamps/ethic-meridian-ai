@@ -229,8 +229,8 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
                 <div className="p-4 bg-background/10 rounded-lg">
                   <h5 className="font-semibold mb-2">🔄 Proceso de Búsqueda de Financiamiento (Funding Search Process)</h5>
                    <p className="text-sm text-muted-foreground">
-                     Su colateral habilita la búsqueda de financiamiento especializado en IA ética. 
-                     Las mejoras con validación ética facilitan el acceso a inversión y reducen riesgos empresariales. 
+                     Su colateral habilita la búsqueda de financiamiento especializado para mejoras empresariales con IA. 
+                     Las mejoras implementando IA con validación ética facilitan el acceso a inversión y reducen riesgos empresariales.
                      Pago en formato vesting: 6, 12, 24 meses con monitoreo continuo actualizado con regulaciones
                      (Enables specialized ethical AI funding search with continuous regulatory monitoring).
                    </p>

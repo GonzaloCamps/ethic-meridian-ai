@@ -28,7 +28,7 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
 
   const potentialInvestors = [
     { name: 'Fund Verde Capital', amount: 8500, risk: 'low', commitment: 'Sostenibilidad' },
-    { name: 'TechEth Ventures', amount: 12000, risk: 'medium', commitment: 'IA Ética' },
+    { name: 'TechEth Ventures', amount: 12000, risk: 'medium', commitment: 'IA Responsable' },
     { name: 'Stellar Growth Fund', amount: 6500, risk: 'low', commitment: 'Blockchain' },
     { name: 'Impact AI Partners', amount: 15000, risk: 'medium', commitment: 'Impacto Social' },
     { name: 'Mars Innovation VC', amount: 9500, risk: 'medium', commitment: 'Innovación' }
@@ -83,7 +83,7 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Nuestras mejoras con IA ética facilitan el acceso a financiamiento especializado, 
+            Nuestras mejoras empresariales implementando IA con enfoque ético facilitan el acceso a financiamiento especializado, 
             reduciendo riesgos de inversión y asegurando cumplimiento regulatorio continuo
             (Our ethical AI improvements facilitate access to specialized funding with reduced investment risks and continuous regulatory compliance)
           </p>
@@ -215,7 +215,7 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
               <div>
                 <h4 className="font-semibold mb-2">Implementación Seleccionada:</h4>
                 <p className="text-sm text-muted-foreground">
-                  {selectedService?.details?.name || 'Mejora de IA ética'}
+                  {selectedService?.details?.name || 'Mejora empresarial con IA responsable'}
                 </p>
               </div>
               <div>
@@ -255,7 +255,7 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Star className="w-6 h-6 text-mars-gold" />
-            ¿Por qué invierten en IA ética? (Why invest in ethical AI?)
+            ¿Por qué invierten en mejoras con IA responsable? (Why invest in responsible AI improvements?)
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
@@ -278,8 +278,8 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
               <TrendingUp className="w-12 h-12 text-mars-copper mx-auto mb-4" />
               <h4 className="font-semibold mb-2">Mejora Continua</h4>
               <p className="text-sm text-muted-foreground">
-                Procesos de optimización empresarial permanentes con IA ética validada
-                (Permanent business optimization processes with validated ethical AI)
+                Procesos de optimización empresarial permanentes implementando IA con validación ética
+                (Permanent business optimization processes implementing AI with ethical validation)
               </p>
             </div>
           </div>
