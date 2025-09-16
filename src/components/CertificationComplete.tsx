@@ -179,9 +179,8 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
                   )}
                 </ul>
                 <p className="text-xs text-muted-foreground mt-3 p-3 bg-mars-gold/10 rounded-lg border border-mars-gold/20">
-                  <span className="font-semibold text-mars-gold">Ecosistema EthicAI:</span> Este NFT le permitirá acceder a más oportunidades 
-                  de financiamiento dentro de nuestro ecosistema. Cada certificación aumenta su credibilidad y 
-                  abre puertas a inversores especializados en IA responsable.
+                  <span className="font-semibold text-mars-gold">Ecosistema EthicAI:</span> Este NFT le permite acceder a más oportunidades 
+                  de financiamiento. Cada certificación aumenta su credibilidad con inversores especializados.
                   <br />
                   <span className="italic text-xs">
                     (This NFT enables access to additional funding opportunities within our ecosystem)

@@ -26,7 +26,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
     {
       id: 'ai-area',
       title: 'Implementación de IA por área (Area-specific AI implementation)',
-      description: 'Implementar soluciones de IA con enfoque responsable específicas para mejorar el rendimiento de áreas individuales (Deploy responsible AI solutions to improve individual area performance)',
+      description: 'Implementar soluciones de IA específicas para mejorar áreas individuales (Deploy AI solutions for individual areas)',
       icon: Zap,
       areas: [
         { name: 'Tecnología - Automatización inteligente (Intelligent automation)', improvement: '+25 puntos rendimiento', cost: '15,000 XLM' },
@@ -51,24 +51,24 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
     {
       level: '50%',
       title: 'Certificación IA Responsable Básica (Basic Responsible AI Certification)',
-      description: 'Estándar fundamental para implementación responsable de IA en mejora de indicadores (Fundamental standard for responsible AI implementation in indicator improvement)',
-      requirements: 'Rendimiento mejorado con IA responsable ≥ 50% en todas las áreas',
+      description: 'Estándar fundamental para implementación responsable de IA (Fundamental standard for responsible AI)',
+      requirements: 'Rendimiento mejorado ≥ 50% en todas las áreas',
       cost: '5,000 XLM',
       benefits: ['NFT de certificación', 'Sello verificable on-chain', 'Validez 1 año']
     },
     {
       level: '75%',
       title: 'Certificación IA Empresarial Avanzada (Advanced Business AI Certification)',
-      description: 'Estándar superior para organizaciones líderes en mejoras con IA responsable (Superior standard for leaders in responsible AI improvements)',
-      requirements: 'Rendimiento mejorado con IA responsable ≥ 75% en todas las áreas',
+      description: 'Estándar superior para organizaciones líderes (Superior standard for leaders)',
+      requirements: 'Rendimiento mejorado ≥ 75% en todas las áreas',
       cost: '12,000 XLM',
       benefits: ['NFT premium', 'Acceso a capital responsable', 'Validez 2 años', 'Auditoría continua']
     },
     {
       level: '100%',
       title: 'Certificación IA Empresarial Elite (Elite Business AI Certification)',
-      description: 'Máximo estándar de excelencia en mejoras empresariales con IA responsable (Maximum standard of excellence in responsible business AI improvements)',
-      requirements: 'Rendimiento mejorado con IA responsable = 100% en todas las áreas',
+      description: 'Máximo estándar de excelencia empresarial (Maximum standard of business excellence)',
+      requirements: 'Rendimiento mejorado = 100% en todas las áreas',
       cost: '25,000 XLM',
       benefits: ['NFT elite', 'Financiamiento preferencial', 'Validez 3 años', 'Consultoría estratégica']
     }
@@ -109,10 +109,9 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            Implementamos IA para mejorar sus indicadores empresariales. Además de las mejoras valiosas por sí mismas, 
-            validamos éticamente el uso de IA, facilitando acceso a inversión y reduciendo riesgos. 
-            El monitoreo se actualiza constantemente con nuevas regulaciones para rendimiento sostenible y mejora continua
-            (We implement AI to improve business indicators with ethical validation for investment facilitation and continuous regulatory updates)
+            Implementamos IA para mejorar indicadores empresariales con validación ética, 
+            facilitando acceso a inversión responsable y cumplimiento regulatorio continuo
+            (We implement AI to improve business indicators with ethical validation)
           </p>
         </div>
 

@@ -91,10 +91,9 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Monitoreo de mejoras en indicadores empresariales implementando IA con enfoque ético. 
-            Seguimiento continuo actualizado con nuevas regulaciones y prácticas recomendadas 
-            para asegurar rendimiento sostenible y procesos de mejora permanentes
-            (Monitoring business indicator improvements implementing AI with ethical approach and continuous regulatory updates)
+            Monitoreo de mejoras en indicadores empresariales con seguimiento continuo 
+            actualizado para asegurar rendimiento sostenible
+            (Monitoring business improvements with continuous tracking for sustainable performance)
           </p>
         </div>
 

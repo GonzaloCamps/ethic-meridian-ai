@@ -91,9 +91,9 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Nuestras mejoras empresariales implementando IA con enfoque ético facilitan el acceso a financiamiento especializado, 
-            reduciendo riesgos de inversión y asegurando cumplimiento regulatorio continuo
-            (Our ethical AI improvements facilitate access to specialized funding with reduced investment risks and continuous regulatory compliance)
+            Nuestras mejoras empresariales facilitan acceso a financiamiento especializado 
+            con reducción de riesgos y cumplimiento regulatorio
+            (Our business improvements facilitate specialized funding access)
           </p>
         </div>
 
@@ -263,7 +263,7 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Star className="w-6 h-6 text-mars-gold" />
-            ¿Por qué invierten en mejoras con IA responsable? (Why invest in responsible AI improvements?)
+            ¿Por qué invierten en mejoras responsables? (Why invest in responsible improvements?)
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
@@ -286,8 +286,8 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
               <TrendingUp className="w-12 h-12 text-mars-copper mx-auto mb-4" />
               <h4 className="font-semibold mb-2">Mejora Continua</h4>
               <p className="text-sm text-muted-foreground">
-                Procesos de optimización empresarial permanentes implementando IA con validación ética
-                (Permanent business optimization processes implementing AI with ethical validation)
+                Procesos de optimización permanentes con validación ética
+                (Permanent optimization processes with ethical validation)
               </p>
             </div>
           </div>
