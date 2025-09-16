@@ -23,21 +23,21 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
 
   // Datos iniciales y finales de los indicadores
   const initialScores = {
-    'Tecnología': 60,
-    'RRHH': 70, 
-    'Operaciones': 90,
-    'Finanzas': 85,
-    'Cumplimiento': 80,
-    'Sostenibilidad': 75
+    'Tecnología': 45,
+    'RRHH': 52, 
+    'Operaciones': 70,
+    'Finanzas': 65,
+    'Cumplimiento': 58,
+    'Sostenibilidad': 55
   };
 
   const targetScores = {
     'Tecnología': 85,
-    'RRHH': 90,
-    'Operaciones': 95,
-    'Finanzas': 90,
-    'Cumplimiento': 95,
-    'Sostenibilidad': 88
+    'RRHH': 88,
+    'Operaciones': 92,
+    'Finanzas': 87,
+    'Cumplimiento': 90,
+    'Sostenibilidad': 85
   };
 
   // Calcular scores actuales basado en el progreso temporal
@@ -83,10 +83,10 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Monitoreo de mejoras con IA ética en indicadores empresariales. 
+            Monitoreo de mejoras en indicadores empresariales implementando IA con enfoque ético. 
             Seguimiento continuo actualizado con nuevas regulaciones y prácticas recomendadas 
             para asegurar rendimiento sostenible y procesos de mejora permanentes
-            (Monitoring of ethical AI improvements with continuous regulatory updates for sustainable performance and permanent improvement processes)
+            (Monitoring business indicator improvements implementing AI with ethical approach and continuous regulatory updates)
           </p>
         </div>
 

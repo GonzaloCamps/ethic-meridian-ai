@@ -19,26 +19,26 @@ interface AnalysisDashboardProps {
 
 const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContinue }) => {
   // Datos simulados del análisis de rendimiento
-  const overallPerformance = 75;
-  const aiPotentialBonus = 25; // Potencial con IA
+  const overallPerformance = 58;
+  const aiPotentialBonus = 32; // Potencial con IA
   const totalPotential = overallPerformance + aiPotentialBonus;
 
   const areas = [
-    { name: 'Finanzas', score: 85, potential: 'medium', description: 'Análisis predictivo para optimizar flujo de caja' },
-    { name: 'RRHH', score: 70, potential: 'high', description: 'IA para reclutamiento y retención de talento' },
-    { name: 'Operaciones', score: 90, potential: 'low', description: 'Automatización de procesos manuales' },
-    { name: 'Tecnología', score: 60, potential: 'high', description: 'Modernización de infraestructura con IA' },
-    { name: 'Cumplimiento', score: 80, potential: 'medium', description: 'Monitoreo automatizado de regulaciones' },
-    { name: 'Sostenibilidad', score: 75, potential: 'medium', description: 'Optimización energética con ML' }
+    { name: 'Finanzas', score: 65, potential: 'medium', description: 'Análisis predictivo para optimizar flujo de caja' },
+    { name: 'RRHH', score: 52, potential: 'high', description: 'IA para reclutamiento y retención de talento' },
+    { name: 'Operaciones', score: 70, potential: 'medium', description: 'Automatización de procesos manuales' },
+    { name: 'Tecnología', score: 45, potential: 'high', description: 'Modernización de infraestructura con IA' },
+    { name: 'Cumplimiento', score: 58, potential: 'high', description: 'Monitoreo automatizado de regulaciones' },
+    { name: 'Sostenibilidad', score: 55, potential: 'high', description: 'Optimización energética con ML' }
   ];
 
   const performanceIndicators = [
-    { name: 'Productividad (Efficiency Score)', value: 82, trend: 'up' },
-    { name: 'Satisfacción Cliente (NPS Score)', value: 68, trend: 'down' },
-    { name: 'Calidad Procesos (Quality Index)', value: 91, trend: 'up' },
-    { name: 'Innovación (Innovation Rate)', value: 74, trend: 'stable' },
-    { name: 'Rentabilidad (ROI)', value: 88, trend: 'up' },
-    { name: 'Tiempo Respuesta (Response Time)', value: 77, trend: 'stable' }
+    { name: 'Productividad (Efficiency Score)', value: 62, trend: 'down' },
+    { name: 'Satisfacción Cliente (NPS Score)', value: 48, trend: 'down' },
+    { name: 'Calidad Procesos (Quality Index)', value: 71, trend: 'stable' },
+    { name: 'Innovación (Innovation Rate)', value: 54, trend: 'down' },
+    { name: 'Rentabilidad (ROI)', value: 68, trend: 'stable' },
+    { name: 'Tiempo Respuesta (Response Time)', value: 57, trend: 'down' }
   ];
 
   const stellarPool = {
@@ -75,10 +75,10 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Analizamos el rendimiento empresarial para implementar IA que mejore indicadores. 
-            Nuestras estrategias de IA incluyen validación ética que facilita acceso a inversión 
-            y reduce riesgos, con monitoreo continuo actualizado con nuevas regulaciones
-            (We analyze business performance to implement AI that improves indicators with ethical validation for investment access and continuous regulatory monitoring)
+            Analizamos el rendimiento empresarial para implementar IA que mejore indicadores empresariales. 
+            Nuestro enfoque ético en el desarrollo de IA facilita acceso a inversión y reduce riesgos, 
+            con monitoreo continuo actualizado con nuevas regulaciones para garantizar rendimiento sostenible
+            (We analyze business performance to implement AI that improves business indicators with ethical approach for investment access and continuous regulatory monitoring)
           </p>
         </div>
 
@@ -120,7 +120,7 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
                   Rendimiento actual: <span className="text-mars-gold font-semibold">{overallPerformance}/100</span>
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Potencial con IA ética: <span className="text-green-400">+{aiPotentialBonus}</span>
+                  Potencial con IA de enfoque ético: <span className="text-green-400">+{aiPotentialBonus}</span>
                 </p>
               </div>
             </div>
@@ -243,7 +243,7 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
         <Card className="p-8 mb-8 border border-mars-crimson/20 bg-card/30 backdrop-blur-sm">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Zap className="w-6 h-6 text-mars-gold" />
-            Oportunidades de IA con mayor impacto ético (AI opportunities with highest ethical impact)
+            Oportunidades de IA con mayor potencial de mejora (AI opportunities with highest improvement potential)
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
@@ -251,14 +251,14 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
                 <Zap className="w-5 h-5 text-mars-crimson mt-1" />
                 <div>
                   <h4 className="font-semibold">Tecnología - Automatización inteligente con transparencia (Intelligent automation with transparency)</h4>
-                  <p className="text-sm text-muted-foreground">Rendimiento: 60% - Implementar IA ética para procesos críticos (ML fairness implementation)</p>
+                  <p className="text-sm text-muted-foreground">Rendimiento: 45% - Implementar IA con enfoque ético para procesos críticos (ML fairness implementation)</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <TrendingUp className="w-5 h-5 text-mars-gold mt-1" />
                 <div>
                   <h4 className="font-semibold">RRHH - IA para gestión de talento responsable (Responsible talent management AI)</h4>
-                  <p className="text-sm text-muted-foreground">Rendimiento: 70% - Sistemas de contratación sin sesgos (Bias-free recruitment systems)</p>
+                  <p className="text-sm text-muted-foreground">Rendimiento: 52% - Sistemas de contratación sin sesgos (Bias-free recruitment systems)</p>
                 </div>
               </div>
             </div>
@@ -284,7 +284,7 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
         {/* Botón Continuar */}
         <div className="text-center">
           <Button variant="hero" size="lg" onClick={onContinue} className="group">
-            Explorar implementación de IA ética (Explore ethical AI implementation)
+            Explorar implementación de IA con enfoque ético (Explore AI implementation with ethical approach)
             <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

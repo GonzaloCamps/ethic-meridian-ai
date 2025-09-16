@@ -190,11 +190,11 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
           <h3 className="text-2xl font-bold mb-6">Impacto Logrado</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <p className="text-3xl font-bold text-mars-gold mb-2">+25%</p>
-              <p className="text-sm text-muted-foreground">Mejora en Score Ético</p>
+              <p className="text-3xl font-bold text-mars-gold mb-2">+32%</p>
+              <p className="text-sm text-muted-foreground">Mejora en Score Global</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-green-400 mb-2">100%</p>
+              <p className="text-3xl font-bold text-green-400 mb-2">90%</p>
               <p className="text-sm text-muted-foreground">Cumplimiento Normativo</p>
             </div>
             <div>
