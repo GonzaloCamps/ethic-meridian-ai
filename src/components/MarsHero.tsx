@@ -45,13 +45,29 @@ const MarsHero = () => {
             </p>
           </div>
 
-          {/* Three Keywords */}
-          <div className="flex justify-center items-center gap-8 md:gap-16 my-12">
-            <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider">AUDITORÍA</span>
-            <span className="text-mars-gold/40">•</span>
-            <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider">FINANCIAMIENTO</span>
-            <span className="text-mars-gold/40">•</span>
-            <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider">CERTIFICACIÓN</span>
+          {/* Three Keywords - Attractive Design */}
+          <div className="relative my-16">
+            <div className="bg-gradient-mars/20 backdrop-blur-lg border border-mars-gold/30 rounded-2xl p-8 mars-glow">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+                <div className="group">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
+                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">CONFIANZA</span>
+                  </div>
+                </div>
+                <div className="text-mars-gold/60 text-3xl font-light">/</div>
+                <div className="group">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
+                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">INVERSIÓN</span>
+                  </div>
+                </div>
+                <div className="text-mars-gold/60 text-3xl font-light">/</div>
+                <div className="group">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
+                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">VALIDACIÓN</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* CTA y Misión */}
