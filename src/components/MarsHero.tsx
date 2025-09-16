@@ -39,8 +39,8 @@ const MarsHero = () => {
                 className="h-48 md:h-64 lg:h-72 w-auto opacity-95 floating"
               />
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              <strong className="text-foreground">Potenciamos a las empresas que utilicen IA de forma ética</strong> y las posicionamos en el mercado
+            <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-semibold">
+              Potenciamos a las empresas que utilicen IA de forma ética y las posicionamos en el mercado
               <span className="text-mars-gold block mt-2">como referentes de confianza ante clientes e inversionistas.</span>
             </p>
           </div>
@@ -95,7 +95,7 @@ const MarsHero = () => {
                   Si llegamos a Marte será con IA ética, o no será. Nuestra misión es asegurar que 
                   cada empresa use IA responsablemente, creando un futuro mejor para la humanidad.
                 </p>
-                <p className="text-xs text-muted-foreground mt-2 italic">
+                <p className="text-sm text-mars-gold mt-2 font-bold">
                   (Built for Hack Meridian Stellar Hackathon - Ethical AI for humanity's future)
                 </p>
               </div>

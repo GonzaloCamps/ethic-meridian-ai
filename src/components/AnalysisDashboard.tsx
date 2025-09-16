@@ -83,9 +83,8 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Analizamos el rendimiento empresarial para implementar IA que mejore indicadores. 
-            Nuestro enfoque ético facilita acceso a inversión y reduce riesgos empresariales
-            (We analyze business performance to implement AI that improves indicators with ethical approach)
+            Integramos IA de forma ética para elevar el rendimiento y atraer inversión confiable.
+            (We integrate AI ethically to elevate performance and attract reliable investment)
           </p>
         </div>
 
@@ -148,8 +147,8 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
                 <p className="text-lg font-semibold text-green-400">{stellarPool.apy}% APY</p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Aumento de ingresos proyectado (Projected revenue increase)</p>
-                <p className="text-lg font-semibold">+{stellarPool.returns.toLocaleString()} XLM/año</p>
+                <p className="text-sm text-muted-foreground">Ganancia esperada anual (Expected annual earnings)</p>
+                <p className="text-lg font-semibold">Se espera que la empresa gane {stellarPool.returns.toLocaleString()} XLM más al año.</p>
               </div>
             </div>
           </Card>
@@ -157,7 +156,8 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
 
         {/* Hexágono de Áreas */}
         <Card className="p-8 mb-12 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
-          <h3 className="text-2xl font-bold mb-6 text-center">Evaluación por área con potencial de IA (Performance by area with AI potential)</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center">Evaluación por área con potencial de IA</h3>
+          <p className="text-center text-muted-foreground mb-8">(Performance by area with AI potential)</p>
           <div className="relative w-80 h-80 mx-auto">
             {/* Niveles de referencia */}
             {[25, 50, 75, 100].map((level, index) => (

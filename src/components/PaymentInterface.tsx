@@ -115,27 +115,6 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
                 </div>
               </Card>
 
-              <Card 
-                className={`p-6 border-2 cursor-pointer transition-all duration-300 ${
-                  paymentMethod === 'traditional' 
-                    ? 'border-mars-gold bg-card mars-glow' 
-                    : 'border-border hover:border-mars-gold/50'
-                }`}
-                onClick={() => setPaymentMethod('traditional')}
-              >
-                <div className="text-center space-y-4">
-                  <CreditCard className="w-12 h-12 text-mars-copper mx-auto" />
-                  <h3 className="text-xl font-bold">Pago Tradicional</h3>
-                  <div className="space-y-2 text-sm">
-                    <p className="text-muted-foreground">• Tarjeta de crédito</p>
-                    <p className="text-muted-foreground">• Transferencia bancaria</p>
-                    <p className="text-muted-foreground">• Procesamiento 3-5 días</p>
-                  </div>
-                  <p className="text-2xl font-bold text-mars-copper">
-                    ${(collateralDetails.baseAmount * 0.1).toLocaleString()} USD
-                  </p>
-                </div>
-              </Card>
             </div>
 
             {paymentMethod && (
@@ -162,11 +141,7 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
             <div className="mb-6 p-4 bg-mars-gold/10 rounded-lg border border-mars-gold/20">
               <h4 className="font-semibold text-mars-gold mb-2">¿Qué es el Colateral? (What is Collateral?)</h4>
               <p className="text-sm text-muted-foreground">
-                El colateral es su <strong>firma de compromiso para que el ERP quede conectado y podamos monitorear las mejoras</strong> 
-                de ahí en adelante. Nuestras estrategias de IA mejoran indicadores empresariales con validación ética 
-                que facilita acceso a inversión y reduce riesgos. El monitoreo continuo se actualiza con nuevas regulaciones 
-                para asegurar rendimiento sostenible y procesos de mejora permanentes
-                (Engagement signature for ERP connection with ethical AI validation for investment facilitation and continuous regulatory updates).
+                El depósito de garantía (colateral) es la firma de compromiso que conecta su ERP y nos permite monitorear las mejoras en adelante. Con estrategias de IA ética optimizamos indicadores empresariales, facilitamos acceso a inversión y reducimos riesgos. El monitoreo continuo, en la búsqueda de mejoras constantes y permanentes, se adapta a nuevas regulaciones para asegurar un rendimiento sostenible.
               </p>
             </div>
 

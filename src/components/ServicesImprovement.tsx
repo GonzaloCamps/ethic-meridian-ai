@@ -231,7 +231,7 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm mb-8">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Sparkles className="w-6 h-6 text-mars-gold" />
-            Tecnologías de IA Responsable Disponibles (Available Responsible AI Technologies)
+            Tecnologías de IA Disponibles (Available AI Technologies)
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {aiStrategies.map((strategy, index) => (
@@ -243,13 +243,23 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
           </div>
         </Card>
 
+        {/* Pool Explanation */}
+        <Card className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm mb-8">
+          <h3 className="text-xl font-bold mb-4 text-mars-gold">¿Qué es el Pool de Financiamiento?</h3>
+          <div className="space-y-3 text-sm text-muted-foreground">
+            <p>• El pool es una alcancía común en Stellar, respaldada por un contrato inteligente.</p>
+            <p>• El cliente se compromete a usar los fondos en IA responsable, con monitoreo y resultados transparentes.</p>
+            <p>• Los inversionistas ven los estados financieros y reciben automáticamente su retorno proporcional.</p>
+          </div>
+        </Card>
+
         {/* Pool Stellar */}
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center">
           <div className="mb-6">
             <Globe className="w-16 h-16 text-mars-gold mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Financiamiento con Stellar (Stellar-based Financing)</h3>
             <p className="text-muted-foreground">
-              Aproveche las ventajas del ecosistema Stellar para financiar la implementación de mejoras empresariales con IA responsable (Leverage Stellar ecosystem advantages to fund responsible business AI improvements)
+              Aproveche las ventajas del ecosistema Stellar para financiar la implementación de mejoras empresariales con IA responsable, transformándolas en una verdadera ventaja competitiva (Leverage Stellar ecosystem advantages to fund responsible business AI improvements, transforming them into a true competitive advantage)
             </p>
           </div>
 
