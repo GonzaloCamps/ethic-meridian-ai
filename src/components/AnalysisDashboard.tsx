@@ -18,27 +18,27 @@ interface AnalysisDashboardProps {
 }
 
 const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContinue }) => {
-  // Datos simulados del análisis
-  const ethicalScore = 75;
-  const bonusScore = 25; // Por leyes futuras
-  const totalScore = ethicalScore + bonusScore;
+  // Datos simulados del análisis de rendimiento
+  const overallPerformance = 75;
+  const aiPotentialBonus = 25; // Potencial con IA
+  const totalPotential = overallPerformance + aiPotentialBonus;
 
   const areas = [
-    { name: 'Finanzas', score: 85, risk: 'low' },
-    { name: 'RRHH', score: 70, risk: 'medium' },
-    { name: 'Operaciones', score: 90, risk: 'low' },
-    { name: 'Tecnología', score: 60, risk: 'high' },
-    { name: 'Cumplimiento', score: 80, risk: 'medium' },
-    { name: 'Sostenibilidad', score: 75, risk: 'medium' }
+    { name: 'Finanzas', score: 85, potential: 'medium', description: 'Análisis predictivo para optimizar flujo de caja' },
+    { name: 'RRHH', score: 70, potential: 'high', description: 'IA para reclutamiento y retención de talento' },
+    { name: 'Operaciones', score: 90, potential: 'low', description: 'Automatización de procesos manuales' },
+    { name: 'Tecnología', score: 60, potential: 'high', description: 'Modernización de infraestructura con IA' },
+    { name: 'Cumplimiento', score: 80, potential: 'medium', description: 'Monitoreo automatizado de regulaciones' },
+    { name: 'Sostenibilidad', score: 75, potential: 'medium', description: 'Optimización energética con ML' }
   ];
 
-  const indicators = [
-    { name: 'Privacidad/PII', value: 82, trend: 'up' },
-    { name: 'Sesgo Algorítmico', value: 68, trend: 'down' },
-    { name: 'Trazabilidad', value: 91, trend: 'up' },
-    { name: 'Explicabilidad', value: 74, trend: 'stable' },
-    { name: 'Seguridad', value: 88, trend: 'up' },
-    { name: 'Continuidad/DRP', value: 77, trend: 'stable' }
+  const performanceIndicators = [
+    { name: 'Productividad (Efficiency Score)', value: 82, trend: 'up' },
+    { name: 'Satisfacción Cliente (NPS Score)', value: 68, trend: 'down' },
+    { name: 'Calidad Procesos (Quality Index)', value: 91, trend: 'up' },
+    { name: 'Innovación (Innovation Rate)', value: 74, trend: 'stable' },
+    { name: 'Rentabilidad (ROI)', value: 88, trend: 'up' },
+    { name: 'Tiempo Respuesta (Response Time)', value: 77, trend: 'stable' }
   ];
 
   const stellarPool = {
@@ -47,8 +47,8 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
     returns: 6250
   };
 
-  const getRiskColor = (risk: string) => {
-    switch (risk) {
+  const getPotentialColor = (potential: string) => {
+    switch (potential) {
       case 'low': return 'text-green-400';
       case 'medium': return 'text-mars-gold';
       case 'high': return 'text-mars-crimson';
@@ -56,11 +56,11 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
     }
   };
 
-  const getRiskIcon = (risk: string) => {
-    switch (risk) {
+  const getPotentialIcon = (potential: string) => {
+    switch (potential) {
       case 'low': return CheckCircle;
-      case 'medium': return AlertTriangle;
-      case 'high': return AlertTriangle;
+      case 'medium': return TrendingUp;
+      case 'high': return Zap;
       default: return Shield;
     }
   };
@@ -71,11 +71,11 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
-              Análisis Ético
+              Análisis de Rendimiento
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Resultado del análisis de su ERP con indicadores de ética en IA
+            Evaluación completa del rendimiento de su empresa con identificación de oportunidades para mejoras con IA
           </p>
         </div>
 
@@ -83,7 +83,7 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <Card className="p-6 col-span-2 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
             <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold">Score Ético Total</h3>
+              <h3 className="text-2xl font-bold">Rendimiento Global con IA</h3>
               <div className="relative w-40 h-40 mx-auto">
                 <svg className="w-full h-full" viewBox="0 0 160 160">
                   <circle
@@ -101,23 +101,23 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
                     fill="none"
                     stroke="hsl(var(--mars-gold))"
                     strokeWidth="10"
-                    strokeDasharray={`${(totalScore / 130) * 440} 440`}
+                    strokeDasharray={`${(totalPotential / 130) * 440} 440`}
                     strokeLinecap="round"
                     transform="rotate(-90 80 80)"
                     className="transition-all duration-1000"
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-3xl font-bold text-mars-gold">{totalScore}</span>
+                  <span className="text-3xl font-bold text-mars-gold">{totalPotential}</span>
                   <span className="text-sm text-muted-foreground">/ 130</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <p className="text-lg">
-                  Base: <span className="text-mars-gold font-semibold">{ethicalScore}/100</span>
+                  Rendimiento actual: <span className="text-mars-gold font-semibold">{overallPerformance}/100</span>
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Bono leyes futuras: <span className="text-green-400">+{bonusScore}</span>
+                  Potencial con IA ética: <span className="text-green-400">+{aiPotentialBonus}</span>
                 </p>
               </div>
             </div>
@@ -126,19 +126,19 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
           <Card className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
               <Globe className="w-6 h-6 text-mars-gold" />
-              Pool Stellar XLM
+              Financiamiento Disponible
             </h3>
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-muted-foreground">Colateral Requerido</p>
+                <p className="text-sm text-muted-foreground">Inversión disponible para IA (Available funding for AI implementation)</p>
                 <p className="text-2xl font-bold text-mars-gold">{stellarPool.collateral.toLocaleString()} XLM</p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Rentabilidad Anual</p>
+                <p className="text-sm text-muted-foreground">Retorno esperado con mejoras (Expected ROI with improvements)</p>
                 <p className="text-lg font-semibold text-green-400">{stellarPool.apy}% APY</p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Retorno Estimado</p>
+                <p className="text-sm text-muted-foreground">Aumento de ingresos proyectado (Projected revenue increase)</p>
                 <p className="text-lg font-semibold">+{stellarPool.returns.toLocaleString()} XLM/año</p>
               </div>
             </div>
@@ -147,7 +147,7 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
 
         {/* Hexágono de Áreas */}
         <Card className="p-8 mb-12 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
-          <h3 className="text-2xl font-bold mb-6 text-center">Mapa de Áreas Organizacionales</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center">Evaluación de rendimiento por área con potencial de mejora con IA (Performance assessment by area with AI improvement potential)</h3>
           <div className="relative w-80 h-80 mx-auto">
             {/* Niveles de referencia */}
             {[25, 50, 75, 100].map((level, index) => (
@@ -187,7 +187,7 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
               const radius = (area.score / 100) * 140;
               const x = 160 + radius * Math.cos(angle);
               const y = 160 + radius * Math.sin(angle);
-              const RiskIcon = getRiskIcon(area.risk);
+              const PotentialIcon = getPotentialIcon(area.potential);
 
               return (
                 <div
@@ -197,11 +197,12 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
                 >
                   <div className="relative">
                     <div className="w-12 h-12 bg-gradient-mars rounded-full flex items-center justify-center mars-glow group-hover:scale-110 transition-transform">
-                      <RiskIcon className={`w-6 h-6 ${getRiskColor(area.risk)}`} />
+                      <PotentialIcon className={`w-6 h-6 ${getPotentialColor(area.potential)}`} />
                     </div>
-                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+                    <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 text-center w-32">
                       <p className="text-xs font-semibold whitespace-nowrap">{area.name}</p>
-                      <p className="text-xs text-mars-gold">{area.score}%</p>
+                      <p className="text-xs text-mars-gold">{area.score}% rendimiento</p>
+                      <p className="text-xs text-muted-foreground">{area.description}</p>
                     </div>
                   </div>
                 </div>
@@ -210,9 +211,9 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
           </div>
         </Card>
 
-        {/* Indicadores Adicionales */}
+        {/* Indicadores de Rendimiento */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {indicators.map((indicator, index) => (
+          {performanceIndicators.map((indicator, index) => (
             <Card key={index} className="p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-2">
                 <h4 className="font-semibold">{indicator.name}</h4>
@@ -235,26 +236,26 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
           ))}
         </div>
 
-        {/* Áreas de Mejora */}
+        {/* Oportunidades de IA Identificadas */}
         <Card className="p-8 mb-8 border border-mars-crimson/20 bg-card/30 backdrop-blur-sm">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Zap className="w-6 h-6 text-mars-gold" />
-            Áreas de Mejora Identificadas
+            Oportunidades de IA con mayor impacto ético (AI opportunities with highest ethical impact)
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <AlertTriangle className="w-5 h-5 text-mars-crimson mt-1" />
+                <Zap className="w-5 h-5 text-mars-crimson mt-1" />
                 <div>
-                  <h4 className="font-semibold">Tecnología - Sesgo Algorítmico</h4>
-                  <p className="text-sm text-muted-foreground">Score: 60% - Requiere implementación de fairness ML</p>
+                  <h4 className="font-semibold">Tecnología - Automatización inteligente con transparencia (Intelligent automation with transparency)</h4>
+                  <p className="text-sm text-muted-foreground">Rendimiento: 60% - Implementar IA ética para procesos críticos (ML fairness implementation)</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <AlertTriangle className="w-5 h-5 text-mars-gold mt-1" />
+                <TrendingUp className="w-5 h-5 text-mars-gold mt-1" />
                 <div>
-                  <h4 className="font-semibold">RRHH - Privacidad de Datos</h4>
-                  <p className="text-sm text-muted-foreground">Score: 70% - Mejoras en anonimización requeridas</p>
+                  <h4 className="font-semibold">RRHH - IA para gestión de talento responsable (Responsible talent management AI)</h4>
+                  <p className="text-sm text-muted-foreground">Rendimiento: 70% - Sistemas de contratación sin sesgos (Bias-free recruitment systems)</p>
                 </div>
               </div>
             </div>
@@ -262,15 +263,15 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
               <div className="flex items-start gap-3">
                 <Eye className="w-5 h-5 text-mars-gold mt-1" />
                 <div>
-                  <h4 className="font-semibold">Explicabilidad General</h4>
-                  <p className="text-sm text-muted-foreground">Implementar LIME/SHAP para transparencia</p>
+                  <h4 className="font-semibold">Analítica predictiva transparente (Transparent predictive analytics)</h4>
+                  <p className="text-sm text-muted-foreground">Implementar análisis explicable con trazabilidad completa (LIME/SHAP implementation)</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Lock className="w-5 h-5 text-mars-gold mt-1" />
                 <div>
-                  <h4 className="font-semibold">Trazabilidad de Modelos</h4>
-                  <p className="text-sm text-muted-foreground">MLOps y versionado de datasets requerido</p>
+                  <h4 className="font-semibold">Sistemas de decisión auditables (Auditable decision systems)</h4>
+                  <p className="text-sm text-muted-foreground">MLOps ético con versionado y monitoreo continuo (Ethical MLOps with versioning)</p>
                 </div>
               </div>
             </div>
@@ -280,7 +281,7 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
         {/* Botón Continuar */}
         <div className="text-center">
           <Button variant="hero" size="lg" onClick={onContinue} className="group">
-            Explorar Servicios de Mejora
+            Explorar implementación de IA ética (Explore ethical AI implementation)
             <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

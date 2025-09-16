@@ -9,13 +9,14 @@ import ServicesImprovement from '@/components/ServicesImprovement';
 import PaymentInterface from '@/components/PaymentInterface';
 import MonitoringDashboard from '@/components/MonitoringDashboard';
 import CertificationComplete from '@/components/CertificationComplete';
+import InvestmentDashboard from '@/components/InvestmentDashboard';
 import Watermark from '@/components/Watermark';
 import marsHero from '@/assets/mars-hero.jpg';
 import marsMedium from '@/assets/mars-medium.jpg';
 import marsClose from '@/assets/mars-close.jpg';
 import marsTexture from '@/assets/mars-texture-detail.jpg';
 
-type AppPhase = 'hero' | 'agent' | 'erp' | 'analysis' | 'services' | 'payment' | 'monitoring' | 'certification';
+type AppPhase = 'hero' | 'agent' | 'erp' | 'analysis' | 'services' | 'payment' | 'investment' | 'monitoring' | 'certification';
 
 const Index = () => {
   const [currentPhase, setCurrentPhase] = useState<AppPhase>('hero');
@@ -31,6 +32,7 @@ const Index = () => {
       case 'analysis': return marsClose;
       case 'services':
       case 'payment':
+      case 'investment':
       case 'monitoring': return marsTexture;
       case 'certification': return marsTexture;
       default: return marsHero;
@@ -61,6 +63,10 @@ const Index = () => {
   };
 
   const handlePaymentComplete = () => {
+    setCurrentPhase('investment');
+  };
+
+  const handleFundingComplete = () => {
     setCurrentPhase('monitoring');
   };
 
@@ -134,6 +140,13 @@ const Index = () => {
           <PaymentInterface 
             selectedService={selectedService}
             onPaymentComplete={handlePaymentComplete}
+          />
+        )}
+
+        {currentPhase === 'investment' && selectedService && (
+          <InvestmentDashboard 
+            selectedService={selectedService}
+            onFundingComplete={handleFundingComplete}
           />
         )}
 

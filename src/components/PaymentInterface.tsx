@@ -38,7 +38,7 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
   };
 
   const handleCollateralDeposit = () => {
-    // Simular proceso de depósito
+    // Simular proceso de depósito e iniciar búsqueda de financiamiento
     setTimeout(() => {
       onPaymentComplete();
     }, 2000);
@@ -152,11 +152,12 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
             </h3>
 
             <div className="mb-6 p-4 bg-mars-gold/10 rounded-lg border border-mars-gold/20">
-              <h4 className="font-semibold text-mars-gold mb-2">¿Qué es el Colateral?</h4>
+              <h4 className="font-semibold text-mars-gold mb-2">¿Qué es el Colateral? (What is Collateral?)</h4>
               <p className="text-sm text-muted-foreground">
-                El colateral es su <strong>firma de compromiso</strong> que permite conectar su ERP a nuestra plataforma 
-                para monitoreo continuo de mejoras. No es un costo adicional: usted conserva su inversión y gana 
-                rentabilidad mientras implementamos las mejoras acordadas.
+                El colateral es su <strong>firma de compromiso para que el ERP quede conectado y podamos monitorear las mejoras</strong> 
+                de ahí en adelante (Your engagement signature to keep the ERP connected for ongoing improvement monitoring). 
+                No es un costo adicional: usted conserva su inversión y gana rentabilidad mientras implementamos 
+                las mejoras de IA acordadas (Not an additional cost: you keep your investment and earn returns while we implement the agreed AI improvements).
               </p>
             </div>
 
@@ -225,10 +226,11 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
                 </div>
 
                 <div className="p-4 bg-background/10 rounded-lg">
-                  <h5 className="font-semibold mb-2">🔄 Proceso de Inversión</h5>
+                  <h5 className="font-semibold mb-2">🔄 Proceso de Búsqueda de Financiamiento (Funding Search Process)</h5>
                   <p className="text-sm text-muted-foreground">
-                    Su colateral conectará con inversionistas del mercado primario para 
-                    financiar la implementación de IA. Pago en formato vesting: 6, 12, 24 meses.
+                    Su colateral habilitará la búsqueda de inversionistas del mercado primario especializados en IA ética 
+                    para financiar la implementación. Pago en formato vesting: 6, 12, 24 meses 
+                    (Enables search for primary market investors specialized in ethical AI. Vesting payments: 6, 12, 24 months).
                   </p>
                 </div>
               </div>
