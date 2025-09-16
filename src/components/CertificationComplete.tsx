@@ -11,6 +11,7 @@ import {
   Shield,
   Star
 } from 'lucide-react';
+import ethicaiLogo from '@/assets/ethicai-logo.png';
 
 interface CertificationCompleteProps {
   certificationLevel: string;
@@ -62,6 +63,13 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <div className="mb-8">
+            <div className="flex justify-center mb-6">
+              <img 
+                src={ethicaiLogo} 
+                alt="EthicAI Validator" 
+                className="h-24 w-auto floating opacity-90"
+              />
+            </div>
             <Award className="w-24 h-24 text-mars-gold mx-auto mb-6 animate-bounce" />
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-gold bg-clip-text text-transparent">
@@ -69,7 +77,7 @@ const CertificationComplete: React.FC<CertificationCompleteProps> = ({ certifica
               </span>
             </h1>
             <p className="text-2xl text-muted-foreground">
-              Su NFT de Certificación Ética ha sido generado exitosamente
+              Su NFT de Certificación ha sido generado exitosamente
             </p>
           </div>
         </div>

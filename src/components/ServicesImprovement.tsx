@@ -12,6 +12,7 @@ import {
   Shield,
   Globe
 } from 'lucide-react';
+import ethicaiLogo from '@/assets/ethicai-logo.png';
 
 interface ServicesImprovementProps {
   erpData: any;
@@ -95,6 +96,13 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
+          <div className="flex justify-center mb-6">
+            <img 
+              src={ethicaiLogo} 
+              alt="EthicAI Validator" 
+              className="h-20 w-auto floating opacity-90"
+            />
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
               Implementación de IA para Mejoras Empresariales

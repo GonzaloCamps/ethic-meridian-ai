@@ -10,6 +10,7 @@ import {
   DollarSign,
   Star
 } from 'lucide-react';
+import ethicaiLogo from '@/assets/ethicai-logo.png';
 
 interface PaymentInterfaceProps {
   selectedService: any;
@@ -48,6 +49,13 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
     <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
+          <div className="flex justify-center mb-6">
+            <img 
+              src={ethicaiLogo} 
+              alt="EthicAI Validator" 
+              className="h-20 w-auto floating opacity-90"
+            />
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-gold bg-clip-text text-transparent">
               Proceso de Pago
