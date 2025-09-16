@@ -65,28 +65,12 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {agentType === 'ai' 
-              ? 'Su agente IA analizará automáticamente los datos para validación ética'
+              ? 'Su agente de IA analiza los datos y garantiza una validación automática, detallada y segura, protegiendo siempre la confidencialidad de su información.'
               : 'Nuestro experto revisará su información de forma confidencial'
             }
           </p>
         </div>
 
-        {/* Stellar Security Info */}
-        <Card className="mb-8 p-6 border border-mars-gold/20 bg-card/30 backdrop-blur-sm">
-          <div className="flex items-start gap-4">
-            <Shield className="w-8 h-8 text-mars-gold mt-1" />
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Seguridad Blockchain Stellar</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>• <strong>Hash SHA-256</strong> de evidencias para integridad</p>
-                <p>• <strong>Anclaje on-chain</strong> de resultados en Stellar</p>
-                <p>• <strong>Privacidad by-design:</strong> No se exponen PII en claro</p>
-                <p>• <strong>KYC/AML</strong> integrado cuando aplica</p>
-                <p>• <strong>Contratos Soroban</strong> para cálculo automático de puntuación</p>
-              </div>
-            </div>
-          </div>
-        </Card>
 
         {/* Upload Area */}
         <Card 
