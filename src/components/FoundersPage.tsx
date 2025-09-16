@@ -28,8 +28,7 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Behind this solution is a dedicated team committed to building the future of ethical AI 
-            validation and responsible technology implementation.
+            Behind this solution is a dedicated team pioneering the future of responsible AI validation
           </p>
         </div>
 
@@ -39,7 +38,7 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
           <Card className="p-8 border-2 border-mars-gold/30 bg-card/30 backdrop-blur-sm mars-glow hover:scale-105 transition-all duration-300">
             <div className="text-center space-y-6">
               <div className="relative">
-                <div className="w-48 h-48 mx-auto rounded-xl overflow-hidden border-4 border-mars-gold/50 bg-gradient-mars p-2">
+                <div className="w-48 h-48 mx-auto rounded-xl overflow-hidden border-4 border-mars-gold/50 bg-gradient-mars p-2 relative futuristic-frame">
                   <div className="w-full h-full rounded-lg overflow-hidden relative">
                     <img 
                       src={oliverImage} 
@@ -47,6 +46,8 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-mars-gold/10 to-mars-crimson/10"></div>
+                    <div className="absolute top-2 left-2 w-2 h-2 bg-mars-gold rounded-full animate-pulse"></div>
+                    <div className="absolute bottom-2 right-2 w-2 h-2 bg-mars-gold rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
                   </div>
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center border-2 border-background">
@@ -58,8 +59,7 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
                 <h3 className="text-2xl font-bold mb-2">Oliver Mora</h3>
                 <p className="text-mars-gold font-semibold mb-4">Founder & CEO</p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Specialist in Digital Innovation Strategy, Web3, and New Ethical Technologies. 
-                  Leading the vision of responsible AI implementation for enterprise transformation.
+                  A specialist in Digital Innovation Strategy, Web3, and New Ethical Technologies
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
           <Card className="p-8 border-2 border-mars-gold/30 bg-card/30 backdrop-blur-sm mars-glow hover:scale-105 transition-all duration-300">
             <div className="text-center space-y-6">
               <div className="relative">
-                <div className="w-48 h-48 mx-auto rounded-xl overflow-hidden border-4 border-mars-gold/50 bg-gradient-mars p-2">
+                <div className="w-48 h-48 mx-auto rounded-xl overflow-hidden border-4 border-mars-gold/50 bg-gradient-mars p-2 relative futuristic-frame">
                   <div className="w-full h-full rounded-lg overflow-hidden relative">
                     <img 
                       src={gonzaloImage} 
@@ -103,6 +103,8 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-mars-gold/10 to-mars-crimson/10"></div>
+                    <div className="absolute top-2 left-2 w-2 h-2 bg-mars-gold rounded-full animate-pulse"></div>
+                    <div className="absolute bottom-2 right-2 w-2 h-2 bg-mars-gold rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
                   </div>
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center border-2 border-background">
@@ -114,8 +116,8 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
                 <h3 className="text-2xl font-bold mb-2">Gonzalo Camps</h3>
                 <p className="text-mars-gold font-semibold mb-4">Co-Founder & CTO</p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Expert in enterprise blockchain solutions implementation with a track record of 
-                  integrating eight organizations, driving transparency and governance excellence.
+                  An expert in enterprise blockchain solutions implementation with a track record of 
+                  integrating eight organizations, driving transparency and governance
                 </p>
               </div>
 
@@ -152,9 +154,7 @@ const FoundersPage: React.FC<FoundersPageProps> = ({ onContinue }) => {
         <Card className="p-8 border border-mars-gold/20 bg-card/30 backdrop-blur-sm text-center mb-12">
           <h3 className="text-2xl font-bold mb-6">Our Mission</h3>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6">
-            We believe that if humanity reaches Mars, it will be with ethical AI, or not at all. 
-            Our mission is to ensure every enterprise uses AI responsibly, creating a better future 
-            for humanity through transparent, auditable, and ethical technology implementation.
+            Behind this solution is a dedicated team. Led by Founder, Oliver Mora, a specialist in Digital Innovation Strategy, Web3, and New Ethical Technologies. He is joined by Co-Founder Gonzalo Camps, an expert in enterprise blockchain solutions implementation with a track record of integrating eight organizations, driving transparency and governance.
           </p>
           <div className="bg-mars-gold/10 border border-mars-gold/20 rounded-lg p-4 inline-block">
             <p className="text-sm text-mars-gold font-bold">
