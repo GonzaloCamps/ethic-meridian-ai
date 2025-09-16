@@ -72,15 +72,7 @@ const MarsHero = () => {
               Únase a corporaciones, gobiernos y ONGs que ya confían en nuestra plataforma para 
               validar y mejorar sus sistemas de inteligencia artificial.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="hero" size="lg" className="group">
-                Comenzar Validación
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="bg-background/10 backdrop-blur-sm">
-                Ver Demo
-              </Button>
-            </div>
+            {/* CTA será manejado por el componente padre */}
           </div>
 
           {/* Trust Indicators */}
