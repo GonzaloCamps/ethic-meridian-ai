@@ -83,7 +83,9 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Conectando con inversionistas del mercado primario especializados en IA ética (Connecting with primary market investors specialized in ethical AI)
+            Nuestras mejoras con IA ética facilitan el acceso a financiamiento especializado, 
+            reduciendo riesgos de inversión y asegurando cumplimiento regulatorio continuo
+            (Our ethical AI improvements facilitate access to specialized funding with reduced investment risks and continuous regulatory compliance)
           </p>
         </div>
 
@@ -258,23 +260,26 @@ const InvestmentDashboard: React.FC<InvestmentDashboardProps> = ({ selectedServi
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <DollarSign className="w-12 h-12 text-mars-gold mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Rentabilidad Sostenible</h4>
+              <h4 className="font-semibold mb-2">Riesgo Reducido</h4>
               <p className="text-sm text-muted-foreground">
-                Mayor ROI a largo plazo con prácticas éticas (Higher long-term ROI with ethical practices)
+                Validación ética reduce riesgos de inversión y garantiza sostenibilidad 
+                (Ethical validation reduces investment risks and ensures sustainability)
               </p>
             </div>
             <div className="text-center">
               <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Cumplimiento Regulatorio</h4>
+              <h4 className="font-semibold mb-2">Cumplimiento Continuo</h4>
               <p className="text-sm text-muted-foreground">
-                Anticipación a regulaciones futuras (Future regulation compliance)
+                Monitoreo actualizado con nuevas regulaciones para protección a largo plazo
+                (Updated monitoring with new regulations for long-term protection)
               </p>
             </div>
             <div className="text-center">
               <TrendingUp className="w-12 h-12 text-mars-copper mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Impacto Positivo</h4>
+              <h4 className="font-semibold mb-2">Mejora Continua</h4>
               <p className="text-sm text-muted-foreground">
-                Inversión con propósito e impacto social (Purpose-driven investment with social impact)
+                Procesos de optimización empresarial permanentes con IA ética validada
+                (Permanent business optimization processes with validated ethical AI)
               </p>
             </div>
           </div>

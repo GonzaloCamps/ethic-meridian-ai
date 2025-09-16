@@ -83,7 +83,10 @@ const MonitoringDashboard: React.FC<MonitoringDashboardProps> = ({ selectedServi
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            ERP conectado - Monitoreo continuo de mejoras en tiempo real
+            Monitoreo de mejoras con IA ética en indicadores empresariales. 
+            Seguimiento continuo actualizado con nuevas regulaciones y prácticas recomendadas 
+            para asegurar rendimiento sostenible y procesos de mejora permanentes
+            (Monitoring of ethical AI improvements with continuous regulatory updates for sustainable performance and permanent improvement processes)
           </p>
         </div>
 

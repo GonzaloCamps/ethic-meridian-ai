@@ -100,8 +100,11 @@ const ServicesImprovement: React.FC<ServicesImprovementProps> = ({ erpData, onSe
               Implementación de IA Ética
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Seleccione el tipo de implementación de IA que desea para mejorar el rendimiento de su empresa con los más altos estándares éticos (Select the type of AI implementation to improve your company's performance with the highest ethical standards)
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            Implementamos IA para mejorar sus indicadores empresariales. Además de las mejoras valiosas por sí mismas, 
+            validamos éticamente el uso de IA, facilitando acceso a inversión y reduciendo riesgos. 
+            El monitoreo se actualiza constantemente con nuevas regulaciones para rendimiento sostenible y mejora continua
+            (We implement AI to improve business indicators with ethical validation for investment facilitation and continuous regulatory updates)
           </p>
         </div>
 

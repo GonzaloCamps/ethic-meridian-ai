@@ -75,7 +75,10 @@ const AnalysisDashboard: React.FC<AnalysisDashboardProps> = ({ erpData, onContin
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Evaluación completa del rendimiento de su empresa con identificación de oportunidades para mejoras con IA
+            Analizamos el rendimiento empresarial para implementar IA que mejore indicadores. 
+            Nuestras estrategias de IA incluyen validación ética que facilita acceso a inversión 
+            y reduce riesgos, con monitoreo continuo actualizado con nuevas regulaciones
+            (We analyze business performance to implement AI that improves indicators with ethical validation for investment access and continuous regulatory monitoring)
           </p>
         </div>
 

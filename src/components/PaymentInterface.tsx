@@ -155,9 +155,10 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
               <h4 className="font-semibold text-mars-gold mb-2">¿Qué es el Colateral? (What is Collateral?)</h4>
               <p className="text-sm text-muted-foreground">
                 El colateral es su <strong>firma de compromiso para que el ERP quede conectado y podamos monitorear las mejoras</strong> 
-                de ahí en adelante (Your engagement signature to keep the ERP connected for ongoing improvement monitoring). 
-                No es un costo adicional: usted conserva su inversión y gana rentabilidad mientras implementamos 
-                las mejoras de IA acordadas (Not an additional cost: you keep your investment and earn returns while we implement the agreed AI improvements).
+                de ahí en adelante. Nuestras estrategias de IA mejoran indicadores empresariales con validación ética 
+                que facilita acceso a inversión y reduce riesgos. El monitoreo continuo se actualiza con nuevas regulaciones 
+                para asegurar rendimiento sostenible y procesos de mejora permanentes
+                (Engagement signature for ERP connection with ethical AI validation for investment facilitation and continuous regulatory updates).
               </p>
             </div>
 
@@ -227,11 +228,12 @@ const PaymentInterface: React.FC<PaymentInterfaceProps> = ({ selectedService, on
 
                 <div className="p-4 bg-background/10 rounded-lg">
                   <h5 className="font-semibold mb-2">🔄 Proceso de Búsqueda de Financiamiento (Funding Search Process)</h5>
-                  <p className="text-sm text-muted-foreground">
-                    Su colateral habilitará la búsqueda de inversionistas del mercado primario especializados en IA ética 
-                    para financiar la implementación. Pago en formato vesting: 6, 12, 24 meses 
-                    (Enables search for primary market investors specialized in ethical AI. Vesting payments: 6, 12, 24 months).
-                  </p>
+                   <p className="text-sm text-muted-foreground">
+                     Su colateral habilita la búsqueda de financiamiento especializado en IA ética. 
+                     Las mejoras con validación ética facilitan el acceso a inversión y reducen riesgos empresariales. 
+                     Pago en formato vesting: 6, 12, 24 meses con monitoreo continuo actualizado con regulaciones
+                     (Enables specialized ethical AI funding search with continuous regulatory monitoring).
+                   </p>
                 </div>
               </div>
             </div>
