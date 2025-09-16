@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Zap, Globe } from 'lucide-react';
 import marsHero from '@/assets/mars-hero.jpg';
 import ethicaiLogo from '@/assets/ethicai-logo.png';
-import ethicaiValidatorLogo from '@/assets/ethicai-validator-logo.png';
+import ethicaiValidatorLogo from '@/assets/ethicai-validator-logo-large.png';
 import stellarLogo from '@/assets/stellar-logo.png';
 
 const MarsHero = () => {
@@ -32,11 +32,11 @@ const MarsHero = () => {
         <div className="space-y-8">
           {/* Logo grande centrado */}
           <div className="space-y-6">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-12">
               <img 
                 src={ethicaiValidatorLogo} 
                 alt="EthicAI Validator" 
-                className="h-48 md:h-64 lg:h-72 w-auto opacity-95 floating"
+                className="h-56 md:h-80 lg:h-96 w-auto opacity-95 floating drop-shadow-2xl"
               />
             </div>
             <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-semibold">
@@ -45,31 +45,29 @@ const MarsHero = () => {
             </p>
           </div>
 
-          {/* Value Props */}
-          <div className="grid md:grid-cols-3 gap-6 my-12">
-            {[
-              {
-                icon: Shield,
-                title: "Certificación NFT",
-                description: "Sello verificable en blockchain Stellar"
-              },
-              {
-                icon: Zap,
-                title: "Auditoría IA",
-                description: "Evaluación automatizada y continua"
-              },
-              {
-                icon: Globe,
-                title: "Financiamiento",
-                description: "Acceso a capital para mejoras éticas"
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-card/30 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-6 mars-glow">
-                <feature.icon className="w-10 h-10 text-mars-gold mx-auto mb-3" />
-                <h3 className="font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+          {/* Three Keywords - Attractive Design */}
+          <div className="relative my-16">
+            <div className="bg-gradient-mars/20 backdrop-blur-lg border border-mars-gold/30 rounded-2xl p-8 mars-glow">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+                <div className="group">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
+                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">CONFIANZA</span>
+                  </div>
+                </div>
+                <div className="text-mars-gold/60 text-3xl font-light">/</div>
+                <div className="group">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
+                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">INVERSIÓN</span>
+                  </div>
+                </div>
+                <div className="text-mars-gold/60 text-3xl font-light">/</div>
+                <div className="group">
+                  <div className="bg-gradient-to-br from-mars-gold/20 to-mars-copper/20 rounded-xl p-4 border border-mars-gold/40 hover:scale-110 transition-all duration-300">
+                    <span className="text-2xl md:text-3xl font-bold text-mars-gold tracking-wider group-hover:text-white transition-colors">VALIDACIÓN</span>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
 
           {/* CTA y Misión */}
@@ -107,19 +105,12 @@ const MarsHero = () => {
             <p className="text-sm text-muted-foreground mb-4">
               Construido para Hackathon Meridian - Stellar Blockchain
             </p>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="bg-card/20 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-4">
-                <h4 className="font-semibold text-sm text-mars-gold mb-1">Auditoría IA</h4>
-                <p className="text-xs text-muted-foreground">Evaluación automatizada y continua</p>
-              </div>
-              <div className="bg-card/20 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-4">
-                <h4 className="font-semibold text-sm text-mars-gold mb-1">Financiamiento</h4>
-                <p className="text-xs text-muted-foreground">Acceso a capital para mejoras éticas</p>
-              </div>
-              <div className="bg-card/20 backdrop-blur-sm border border-mars-gold/20 rounded-lg p-4">
-                <h4 className="font-semibold text-sm text-mars-gold mb-1">Certificación NFT</h4>
-                <p className="text-xs text-muted-foreground">Sello verificable en blockchain Stellar</p>
-              </div>
+            <div className="flex justify-center items-center gap-8 opacity-60">
+              <span className="text-xs">Blockchain Verificable</span>
+              <span className="text-xs">•</span>
+              <span className="text-xs">Auditoría Continua</span>
+              <span className="text-xs">•</span>
+              <span className="text-xs">Certificación NFT</span>
             </div>
           </div>
         </div>
