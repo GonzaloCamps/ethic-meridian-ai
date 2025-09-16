@@ -63,12 +63,59 @@ const ERPUpload: React.FC<ERPUploadProps> = ({ agentType, onERPUploaded }) => {
               Cargue su ERP
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {agentType === 'ai' 
-              ? 'Su agente de IA analiza los datos y garantiza una validación automática, detallada y segura, protegiendo siempre la confidencialidad de su información.'
-              : 'Nuestro experto revisará su información de forma confidencial'
-            }
-          </p>
+          <div className="max-w-2xl mx-auto">
+            {agentType === 'ai' ? (
+              <div className="bg-gradient-to-r from-mars-gold/20 to-mars-crimson/20 border border-mars-gold/30 rounded-lg p-6 mb-8">
+                <p className="text-lg font-semibold text-foreground leading-relaxed">
+                  Su agente de IA analiza los datos y garantiza una validación automática, detallada y segura, protegiendo siempre la confidencialidad de su información.
+                </p>
+              </div>
+            ) : (
+              <p className="text-lg text-muted-foreground mb-8">
+                Nuestro experto revisará su información de forma confidencial
+              </p>
+            )}
+            
+            {/* ERP Explanation */}
+            <div className="bg-card/40 backdrop-blur-sm border border-border rounded-lg p-6 text-left space-y-4">
+              <div>
+                <h3 className="text-xl font-bold text-mars-gold mb-3">📌 ERP en las empresas</h3>
+                <p className="text-muted-foreground mb-4">
+                  Un ERP es el sistema nervioso central de una empresa: conecta finanzas, ventas, operaciones, RRHH e inventario en un solo software.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">📌 ¿Para qué sirve?</h4>
+                <ul className="text-muted-foreground space-y-1">
+                  <li>• Centraliza datos en tiempo real</li>
+                  <li>• Aumenta eficiencia y elimina errores</li>
+                  <li>• Mejora la toma de decisiones</li>
+                  <li>• Escala con el crecimiento de la empresa</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">📌 Integración con Ethic IA Validator</h4>
+                <ul className="text-muted-foreground space-y-1">
+                  <li>• <strong>Conexión inicial:</strong> el ERP se vincula con un contrato inteligente (depósito de garantía).</li>
+                  <li>• <strong>Monitoreo real:</strong> analizamos indicadores desde el ERP.</li>
+                  <li>• <strong>IA ética:</strong> proponemos mejoras sostenibles y transparentes.</li>
+                  <li>• <strong>Sello de confianza:</strong> blockchain certifica cumplimiento y abre acceso a inversión.</li>
+                  <li>• <strong>Mejora continua:</strong> actualización constante con nuevas regulaciones.</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-r from-mars-gold/10 to-mars-crimson/10 border border-mars-gold/20 rounded-lg p-4">
+                <p className="text-foreground font-medium">
+                  👉 <strong>En simple palabras.</strong>
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  Conectamos el ERP de las grandes empresas a blockchain, aplicamos IA ética y transformamos los datos en confianza, inversión y crecimiento sostenible.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
 
